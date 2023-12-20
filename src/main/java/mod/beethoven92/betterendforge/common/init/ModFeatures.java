@@ -6,7 +6,10 @@ import mod.beethoven92.betterendforge.common.world.feature.caves.RoundCaveFeatur
 import mod.beethoven92.betterendforge.common.world.feature.caves.TunelCaveFeature;
 import mod.beethoven92.betterendforge.common.world.surfacebuilder.UmbraSurfaceBuilder;
 import net.minecraft.block.Blocks;
-import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.NoFeatureConfig;
+import net.minecraft.world.gen.feature.OreFeature;
+import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraftforge.event.RegistryEvent.Register;
 
 public class ModFeatures

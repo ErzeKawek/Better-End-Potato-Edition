@@ -1,13 +1,8 @@
 package mod.beethoven92.betterendforge.common.block;
 
-import java.util.Random;
-
-import javax.annotation.Nullable;
-
 import mod.beethoven92.betterendforge.common.tileentity.EndBarrelTileEntity;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.BarrelBlock;
-import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.monster.piglin.PiglinTasks;
@@ -22,6 +17,9 @@ import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
+
+import javax.annotation.Nullable;
+import java.util.Random;
 
 public class EndBarrelBlock extends BarrelBlock {
 	public EndBarrelBlock(AbstractBlock.Properties properties) {
@@ -58,12 +56,7 @@ public class EndBarrelBlock extends BarrelBlock {
 		}
 	}
 
-	@Override
-	public BlockRenderType getRenderType(BlockState state) {
-		return BlockRenderType.MODEL;
-	}
-
-	@Override
+    @Override
 	public void onBlockPlacedBy(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer,
 			ItemStack stack) {
 		if (stack.hasDisplayName()) {

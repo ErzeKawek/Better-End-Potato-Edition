@@ -19,10 +19,7 @@ public class JsonIdConfig extends JsonConfig
 		this.keyFactory = keyFactory;
 	}
 
-	@Override
-	protected void registerEntries() {}
-	
-	protected JsonConfigKey createKey(ResourceLocation id, String key)
+    protected JsonConfigKey createKey(ResourceLocation id, String key)
 	{
 		return this.keyFactory.apply(id, key);
 	}

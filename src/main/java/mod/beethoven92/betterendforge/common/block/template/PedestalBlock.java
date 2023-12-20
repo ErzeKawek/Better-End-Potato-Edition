@@ -1,7 +1,5 @@
 package mod.beethoven92.betterendforge.common.block.template;
 
-import java.util.function.ToIntFunction;
-
 import mod.beethoven92.betterendforge.common.block.BlockProperties;
 import mod.beethoven92.betterendforge.common.block.BlockProperties.PedestalState;
 import mod.beethoven92.betterendforge.common.init.ModTileEntityTypes;
@@ -29,6 +27,8 @@ import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
+
+import java.util.function.ToIntFunction;
 
 public class PedestalBlock extends Block
 {

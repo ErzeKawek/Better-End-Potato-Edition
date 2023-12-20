@@ -155,12 +155,12 @@ public abstract class EndSpikeFeatureMixin
 							if (bl || bl2 || bl3) {
 								boolean bl4 = px == -2 || px == 2 || bl3;
 								boolean bl5 = pz == -2 || pz == 2 || bl3;
-								BlockState blockState = (BlockState) ((BlockState) ((BlockState) ((BlockState) Blocks.IRON_BARS
+								BlockState blockState = Blocks.IRON_BARS
 										.getDefaultState()
-										.with(PaneBlock.NORTH, bl4 && pz != -2)).with(
+										.with(PaneBlock.NORTH, bl4 && pz != -2).with(
 										PaneBlock.SOUTH,
 										bl4 && pz != 2
-								)).with(PaneBlock.WEST, bl5 && px != -2)).with(
+								).with(PaneBlock.WEST, bl5 && px != -2).with(
 										PaneBlock.EAST,
 										bl5 && px != 2
 								);

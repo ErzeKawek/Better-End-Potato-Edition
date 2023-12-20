@@ -150,13 +150,8 @@ public class DragonflyEntity extends AnimalEntity implements IFlyingAnimal
 		{
 			super(entity);
 		}
-		
-		@Override
-		protected boolean shouldResetPitch() 
-		{
-			return true;
-		}
-	}
+
+    }
 
 	class WanderAroundGoal extends Goal
 	{

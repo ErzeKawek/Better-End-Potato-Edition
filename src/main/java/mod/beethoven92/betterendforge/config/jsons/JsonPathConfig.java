@@ -21,9 +21,6 @@ public class JsonPathConfig extends JsonConfig {
         super(modID, group);
     }
 
-    @Override
-    protected void registerEntries() {}
-
     protected static JsonConfigKey createKey(String category, String key) {
         return new JsonConfigKey(key, category.split("\\."));
     }

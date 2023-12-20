@@ -1,9 +1,10 @@
 package mod.beethoven92.betterendforge.common.init;
 
 import com.google.common.collect.ImmutableMap;
-
 import mod.beethoven92.betterendforge.BetterEnd;
 import mod.beethoven92.betterendforge.common.world.structure.*;
+import mod.beethoven92.betterendforge.mixin.common.access.DimensionStructuresSettingsAccessor;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.gen.feature.NoFeatureConfig;
 import net.minecraft.world.gen.feature.structure.Structure;
 import net.minecraft.world.gen.settings.DimensionStructuresSettings;
@@ -42,16 +43,14 @@ public class ModStructures
         ModStructurePieces.registerAllPieces();
     }
     
-    public static <F extends Structure<?>> void setupStructure(F structure,
-    		StructureSeparationSettings structureSeparationSettings)
-    {
-        Structure.NAME_STRUCTURE_BIMAP.put(structure.getRegistryName().toString(), structure);
-
-        DimensionStructuresSettings.field_236191_b_ =
-                ImmutableMap.<Structure<?>, StructureSeparationSettings>builder()
-                        .putAll(DimensionStructuresSettings.field_236191_b_)
-                        .put(structure, structureSeparationSettings)
-                        .build();
+    public static <F extends Structure<?>> void setupStructure(F structure, StructureSeparationSettings structureSeparationSettings) {
+		ResourceLocation id = structure.getRegistryName();
+		if (id == null) return;
+        Structure.NAME_STRUCTURE_BIMAP.put(id.toString(), structure);
+		DimensionStructuresSettingsAccessor.field_236191_b_(ImmutableMap.<Structure<?>, StructureSeparationSettings>builder()
+				.putAll(DimensionStructuresSettings.field_236191_b_)
+				.put(structure, structureSeparationSettings)
+				.build());
     }
 
 }

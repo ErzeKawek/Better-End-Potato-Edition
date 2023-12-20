@@ -1,10 +1,7 @@
 package mod.beethoven92.betterendforge.common.block.template;
 
-import java.util.EnumMap;
-
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -21,6 +18,8 @@ import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.IWorldReader;
+
+import java.util.EnumMap;
 
 public class WallPlantBlock extends PlantBlock
 {
@@ -52,7 +51,7 @@ public class WallPlantBlock extends PlantBlock
 	@Override
 	public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos) 
 	{
-		Direction direction = (Direction)state.get(FACING);
+		Direction direction = state.get(FACING);
 		BlockPos blockPos = pos.offset(direction.getOpposite());
 		BlockState blockState = worldIn.getBlockState(blockPos);
 		return isValidSupport(worldIn, blockPos, blockState, direction);

@@ -18,15 +18,15 @@
 		"common.EndSpikeFeatureMixin",
 		"common.EndSpikeMixin",
 		"common.EntityMixin",
-		"common.MinecraftServerMixin",
 		"common.NoiseChunkGeneratorMixin",
 		"common.PlayerEntityMixin",
-		"common.PlayerListMixin",
 		"common.RecipeManagerMixin",
 		"common.RepairContainerMixin",
 		"common.ServerLevelMixin",
 		"common.ServerPlayerEntityMixin",
 		"common.ServerPlayNetHandlerMixin",
+		"common.access.DimensionStructuresSettingsAccessor",
+		"common.access.FlatGenerationSettingsAccessor",
 		"common.byg.WorldConfigMixin"
 	],
 	"client": [

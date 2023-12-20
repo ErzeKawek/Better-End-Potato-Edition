@@ -10,9 +10,5 @@ public class EndVeilEnchantment extends Enchantment
 	{
 		super(rarityIn, typeIn, slots);
 	}
-	
-	public int getMaxLevel() 
-	{
-		return 1;
-	}
+
 }

@@ -1,12 +1,6 @@
 package mod.beethoven92.betterendforge.common.capability;
 
-import java.util.HashSet;
-import java.util.Set;
-import java.util.UUID;
-import java.util.function.Function;
-
 import com.google.common.collect.ImmutableList;
-
 import mod.beethoven92.betterendforge.BetterEnd;
 import mod.beethoven92.betterendforge.common.init.ModBiomes;
 import mod.beethoven92.betterendforge.common.world.generator.GeneratorOptions;
@@ -39,9 +33,15 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
+import javax.annotation.Nonnull;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.UUID;
+import java.util.function.Function;
+
 public class EndData implements INBTSerializable<CompoundNBT> {
 	@CapabilityInject(EndData.class)
-	public static final Capability<EndData> CAPABILITY = null;
+	public static Capability<EndData> CAPABILITY;
 
 	private final Set<UUID> players;
 	private BlockPos spawn;
@@ -51,8 +51,7 @@ public class EndData implements INBTSerializable<CompoundNBT> {
 	}
 
 	private void login(ServerPlayerEntity player) {
-		if (players.contains(player.getUniqueID()))
-			return;
+		if (players.contains(player.getUniqueID())) return;
 		players.add(player.getUniqueID());
 
 		teleportToSpawn(player);
@@ -159,8 +158,9 @@ public class EndData implements INBTSerializable<CompoundNBT> {
 
 		private final LazyOptional<EndData> instance = LazyOptional.of(CAPABILITY::getDefaultInstance);
 
+		@Nonnull
 		@Override
-		public <T> LazyOptional<T> getCapability(Capability<T> cap, Direction side) {
+		public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> cap, Direction side) {
 			return CAPABILITY.orEmpty(cap, instance);
 		}
 

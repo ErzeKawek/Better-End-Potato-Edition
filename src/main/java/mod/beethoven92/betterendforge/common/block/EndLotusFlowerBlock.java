@@ -34,14 +34,8 @@ public class EndLotusFlowerBlock extends Block
 	{
 		return SHAPE_COLLISION;
 	}
-	
-	@Override
-	public OffsetType getOffsetType() 
-	{
-		return OffsetType.NONE;
-	}
-	
-	@Override
+
+    @Override
 	public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos) 
 	{
 		BlockState down = worldIn.getBlockState(pos.down());

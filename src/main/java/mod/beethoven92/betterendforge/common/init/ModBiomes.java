@@ -1,18 +1,10 @@
 package mod.beethoven92.betterendforge.common.init;
 
-import java.io.InputStream;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
-import java.util.Set;
-
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-
 import mod.beethoven92.betterendforge.common.util.JsonFactory;
 import mod.beethoven92.betterendforge.common.world.biome.*;
 import mod.beethoven92.betterendforge.common.world.biome.cave.*;
@@ -32,6 +24,9 @@ import net.minecraft.world.biome.Biome.Category;
 import net.minecraft.world.biome.Biomes;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+
+import java.io.InputStream;
+import java.util.*;
 
 public class ModBiomes 
 {

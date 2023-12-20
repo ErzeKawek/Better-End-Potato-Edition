@@ -184,13 +184,7 @@ public final class JsonConfigKeeper
 			super(defaultValue);
 		}
 
-		@Override
-		public Integer getDefault() 
-		{
-			return this.defaultValue;
-		}
-
-		@Override
+        @Override
 		public Integer fromJson() 
 		{
 			return JSONUtils.getInt(location, key, defaultValue);

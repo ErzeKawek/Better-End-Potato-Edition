@@ -1,11 +1,9 @@
 package mod.beethoven92.betterendforge.common.event.forge;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import mod.beethoven92.betterendforge.BetterEnd;
 import mod.beethoven92.betterendforge.common.init.ModBiomes;
 import mod.beethoven92.betterendforge.common.init.ModStructures;
+import mod.beethoven92.betterendforge.mixin.common.access.DimensionStructuresSettingsAccessor;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.FlatChunkGenerator;
 import net.minecraft.world.gen.feature.structure.Structure;
@@ -15,6 +13,9 @@ import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @Mod.EventBusSubscriber(modid = BetterEnd.MOD_ID)
 public class WorldLoadHandler 
@@ -58,7 +59,7 @@ public class WorldLoadHandler
 					DimensionStructuresSettings.field_236191_b_.get(ModStructures.ETERNAL_PORTAL));
 			tempMap.put(ModStructures.GIANT_ICE_STAR,
 					DimensionStructuresSettings.field_236191_b_.get(ModStructures.GIANT_ICE_STAR));
-			serverWorld.getChunkProvider().getChunkGenerator().func_235957_b_().field_236193_d_ = tempMap;
+			((DimensionStructuresSettingsAccessor)serverWorld.getChunkProvider().getChunkGenerator().func_235957_b_()).field_236193_d_(tempMap);
 		}
 	}
 }
