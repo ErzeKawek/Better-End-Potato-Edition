@@ -1,24 +1,14 @@
-import net.darkhax.curseforgegradle.TaskPublishCurseForge
-
 buildscript {
     repositories {
         maven { url = 'https://files.minecraftforge.net/maven' }
         maven { url='https://dist.creeper.host/Sponge/maven' }
         maven { url='https://repo.spongepowered.org/maven' }
-        maven {
-            url "https://plugins.gradle.org/m2/"
-        }
         mavenCentral()
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
         classpath group: 'org.spongepowered', name: 'mixingradle', version: '0.7-SNAPSHOT'
-        classpath group: 'net.darkhax.curseforgegradle', name: 'CurseForgeGradle', version: '1.1.+'
     }
-}
-
-plugins {
-    id 'net.darkhax.curseforgegradle' version '1.1.+'
 }
 
 apply plugin: 'net.minecraftforge.gradle'
@@ -125,24 +115,3 @@ jar {
 }
 
 jar.finalizedBy('reobfJar')
-java.withSourcesJar()
-
-String currentChangeLog = file("CHANGELOG.md").getText("UTF-8");
-
-tasks.register("publishCurseForge", TaskPublishCurseForge) {
-    apiToken = System.getenv("CURSEFORGE_TOKEN")
-    disableVersionDetection()
-
-    def mainFile = upload(cf_project_id, jar)
-    mainFile.displayName = "Better End Potato Edition - ${version}"
-    mainFile.releaseType = "release"
-    mainFile.changelog = currentChangeLog
-    mainFile.changelogType = "markdown"
-    mainFile.addModLoader("Forge")
-    mainFile.addJavaVersion("Java 17", "Java 8")
-    mainFile.addGameVersion("1.16.5")
-
-    def sourcesFile = mainFile.withAdditionalFile(sourcesJar)
-    sourcesFile.changelog = currentChangeLog
-    sourcesFile.changelogType = "markdown"
-}
