@@ -37,14 +37,13 @@ public class ArchFeature extends Feature<NoFeatureConfig> {
 	@Override
 	public boolean generate(ISeedReader level, ChunkGenerator generator, Random random, BlockPos origin,
                             NoFeatureConfig config) {
-		final ISeedReader world = level;
 
-		
-		BlockPos pos = FeatureHelper.getPosOnSurfaceWG(
-			world,
+
+        BlockPos pos = FeatureHelper.getPosOnSurfaceWG(
+                level,
 			new BlockPos((origin.getX() & 0xFFFFFFF0) | 7, 0, (origin.getZ() & 0xFFFFFFF0) | 7)
 		);
-		if (!world.getBlockState(pos.down(5)).isIn(ModTags.GEN_TERRAIN)) {
+		if (!level.getBlockState(pos.down(5)).isIn(ModTags.GEN_TERRAIN)) {
 			return false;
 		}
 		
@@ -79,7 +78,7 @@ public class ArchFeature extends Feature<NoFeatureConfig> {
 		if (side > 47) {
 			side = 47;
 		}
-		arch.fillArea(world, pos, AABBAcc.ofSize(Vector3d.copyCentered(pos), side, side, side));
+		arch.fillArea(level, pos, AABBAcc.ofSize(Vector3d.copyCentered(pos), side, side, side));
 		
 		return true;
 	}

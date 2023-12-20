@@ -15,8 +15,7 @@ public class WorldDataAPI {
 
 
     public static CompoundNBT getRootTag(String modID) {
-        CompoundNBT root = TAGS.computeIfAbsent(modID, k -> new CompoundNBT());
-        return root;
+        return TAGS.computeIfAbsent(modID, k -> new CompoundNBT());
     }
     public static CompoundNBT getCompoundTag(String modID, String path) {
         String[] parts = path.split("\\.");

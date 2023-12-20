@@ -66,8 +66,6 @@ public class TerrainBlock extends Block
 	{
 	      BlockPos blockPos = pos.up();
 	      BlockState blockState = world.getBlockState(blockPos);
-        //int i = ChunkLightProvider.getRealisticOpacity(world, state, pos, blockState, blockPos, Direction.UP, blockState.getOpacity(world, blockPos));
-        //return i < 5;
         if (blockState.isIn(Blocks.SNOW) && blockState.get(SnowBlock.LAYERS) == 1)
 	      {
 	         return true;

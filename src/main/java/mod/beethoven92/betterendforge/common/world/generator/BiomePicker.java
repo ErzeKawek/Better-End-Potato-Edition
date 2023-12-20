@@ -50,9 +50,9 @@ public class BiomePicker
 		return biomes;
 	}
 	
-	public boolean containsImmutable(ResourceLocation id) 
+	public boolean notContainsImmutable(ResourceLocation id)
 	{
-		return immutableIDs.contains(id);
+		return !immutableIDs.contains(id);
 	}
 	
 	public void removeMutableBiome(ResourceLocation id) 

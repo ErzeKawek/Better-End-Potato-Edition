@@ -27,8 +27,6 @@ public class EndLotusLeafBlock extends Block implements IForgeShearable
 	public EndLotusLeafBlock(Properties properties) 
 	{
 		super(properties);
-		//this.setDefaultState(this.stateContainer.getBaseState().with(HORIZONTAL_FACING, Direction.NORTH).
-				//with(SHAPE, TripleShape.BOTTOM));
 	}
 
 	@Override

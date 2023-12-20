@@ -1,7 +1,12 @@
 package mod.beethoven92.betterendforge;
 
 import mod.beethoven92.betterendforge.client.ClientOptions;
+import mod.beethoven92.betterendforge.client.BetterEndClient;
 import mod.beethoven92.betterendforge.common.init.*;
+import mod.beethoven92.betterendforge.common.teleporter.EndPortals;
+import mod.beethoven92.betterendforge.common.world.TerraforgedIntegrationWorldType;
+import mod.beethoven92.betterendforge.common.world.feature.BiomeNBTStructures;
+import mod.beethoven92.betterendforge.common.world.generator.BetterEndBiomeProvider;
 import mod.beethoven92.betterendforge.common.world.generator.GeneratorOptions;
 import mod.beethoven92.betterendforge.config.Configs;
 import net.minecraft.util.ResourceLocation;
@@ -14,7 +19,6 @@ import net.minecraftforge.common.world.ForgeWorldType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -23,18 +27,11 @@ import net.minecraftforge.fml.loading.FMLLoader;
 import net.minecraftforge.fml.loading.FMLPaths;
 import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.IForgeRegistryEntry;
-
-import java.io.File;
-import java.nio.file.Path;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import mod.beethoven92.betterendforge.client.PhysicalClientSide;
-import mod.beethoven92.betterendforge.common.teleporter.EndPortals;
-import mod.beethoven92.betterendforge.common.world.TerraforgedIntegrationWorldType;
-import mod.beethoven92.betterendforge.common.world.feature.BiomeNBTStructures;
-import mod.beethoven92.betterendforge.common.world.generator.BetterEndBiomeProvider;
-import mod.beethoven92.betterendforge.server.PhysicalServerSide;
+import java.io.File;
+import java.nio.file.Path;
 
 
 @Mod(BetterEnd.MOD_ID)
@@ -43,9 +40,6 @@ public class BetterEnd
 	public static final String MOD_ID = "betterendforge";
 
     public static final Logger LOGGER = LogManager.getLogger();
-    
-	public static final IPhysicalSide SIDE = 
-			DistExecutor.safeRunForDist(() -> PhysicalClientSide::new, () -> PhysicalServerSide::new);
 
 	public static final Path CONFIG_PATH = new File(String.valueOf(FMLPaths.CONFIGDIR.get().resolve(MOD_ID))).toPath();
     
@@ -53,8 +47,8 @@ public class BetterEnd
     {
     	IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
     	IEventBus forgeEventBus = MinecraftForge.EVENT_BUS;
-    	
-    	SIDE.setup(modEventBus, forgeEventBus);
+
+		if (isClient()) new BetterEndClient().setup(modEventBus, forgeEventBus);
 
     	modEventBus.addListener(this::setupCommon);
 
@@ -99,7 +93,6 @@ public class BetterEnd
     	@SubscribeEvent
     	public static void registerBiomes(RegistryEvent.Register<Biome> event) 
     	{
-    		ModBiomes.register();
     		ModBiomes.getModBiomes().forEach((end_biome) -> event.getRegistry().register(end_biome.getBiome()));
     	}
     	

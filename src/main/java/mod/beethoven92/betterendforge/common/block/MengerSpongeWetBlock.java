@@ -5,7 +5,6 @@ import mod.beethoven92.betterendforge.common.util.BlockHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.WetSpongeBlock;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.util.SoundCategory;
@@ -32,13 +31,6 @@ public class MengerSpongeWetBlock extends WetSpongeBlock
 	    }
 	}
 
-	/*@Override
-	public void onBlockHarvested(World worldIn, BlockPos pos, BlockState state, PlayerEntity player) 
-	{
-		worldIn.destroyBlock(pos, !player.isCreative());
-		BlockHelper.setWithUpdate(worldIn, pos, Blocks.AIR);
-	}*/
-	
 	@Override
 	public void onPlayerDestroy(IWorld worldIn, BlockPos pos, BlockState state) 
 	{

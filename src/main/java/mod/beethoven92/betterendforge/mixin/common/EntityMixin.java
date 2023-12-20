@@ -85,8 +85,7 @@ public abstract class EntityMixin implements TeleportingEntity
 		if (beCanTeleport()) 
 		{
 			info.setReturnValue(new PortalInfo(new Vector3d(exitPos.getX() + 0.5D, exitPos.getY(), exitPos.getZ() + 0.5D), getMotion(), rotationYaw, rotationPitch));
-			//beResetExitPos();
-			//info.cancel();
+
 		}
 	}
 	

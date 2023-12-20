@@ -78,6 +78,7 @@ public abstract class RepairContainerMixin extends AbstractRepairContainer imple
 		}
 	}
 	
+	@SuppressWarnings("ParameterCanBeLocal")
 	@Inject(method = "func_230301_a_", at = @At("HEAD"), cancellable = true)
 	protected void be_onTakeOutput(PlayerEntity player, ItemStack stack, CallbackInfoReturnable<ItemStack> info) 
 	{

@@ -107,11 +107,6 @@ public class SilkMothEntity extends AnimalEntity implements IFlyingAnimal {
 				BlockState state = this.world.getBlockState(pos);
 				return state.isAir() || !state.getMaterial().blocksMovement();
 			}
-
-			@Override
-			public void tick() {
-				super.tick();
-			}
 		};
 		birdNavigation.setCanEnterDoors(false);
 		birdNavigation.setCanSwim(false);

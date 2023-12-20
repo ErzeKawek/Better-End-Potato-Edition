@@ -1,6 +1,5 @@
 package mod.beethoven92.betterendforge.client;
 
-import mod.beethoven92.betterendforge.IPhysicalSide;
 import mod.beethoven92.betterendforge.client.gui.EndStoneSmelterScreen;
 import mod.beethoven92.betterendforge.client.renderer.*;
 import mod.beethoven92.betterendforge.common.block.material.MetalMaterial;
@@ -21,10 +20,11 @@ import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
-public class PhysicalClientSide implements IPhysicalSide
+import javax.annotation.Nonnull;
+
+public class BetterEndClient
 {
-	@Override
-	public void setup(IEventBus modEventBus, IEventBus forgeEventBus) 
+	public void setup(@Nonnull IEventBus modEventBus, IEventBus forgeEventBus)
 	{
 		modEventBus.addListener(this::clientSetup);
 	}

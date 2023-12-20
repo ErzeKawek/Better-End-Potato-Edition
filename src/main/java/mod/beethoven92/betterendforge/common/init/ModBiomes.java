@@ -84,8 +84,6 @@ public class ModBiomes
 	public static final BetterEndCaveBiome END_CAVE = registerCaveBiome(new EndCaveBiome());
 	public static final BetterEndCaveBiome JADE_CAVE = registerCaveBiome(new JadeCaveBiome());
 
-	public static void register() {}
-
 	public static void onWorldLoad(long seed, Registry<Biome> registry) {
 		CAVE_BIOMES.getBiomes().forEach(biome -> biome.updateActualBiomes(registry));
 		CAVE_BIOMES.rebuild();
@@ -111,7 +109,7 @@ public class ModBiomes
 				
 				if (Configs.BIOME_CONFIG.getBoolean(id, "enabled", true))
 				{
-					if (!LAND_BIOMES.containsImmutable(id) && !VOID_BIOMES.containsImmutable(id) && !SUBBIOMES_UNMUTABLES.contains(id)) 
+					if (LAND_BIOMES.notContainsImmutable(id) && VOID_BIOMES.notContainsImmutable(id) && !SUBBIOMES_UNMUTABLES.contains(id))
 					{
 						JsonObject config = configs.get(id.getNamespace());
 						if (config == null) 

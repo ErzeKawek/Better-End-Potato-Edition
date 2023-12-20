@@ -1,7 +1,6 @@
 package mod.beethoven92.betterendforge.common.teleporter;
 
 import java.io.File;
-import java.util.Iterator;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;

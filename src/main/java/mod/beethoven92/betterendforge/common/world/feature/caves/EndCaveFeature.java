@@ -1,12 +1,7 @@
 package mod.beethoven92.betterendforge.common.world.feature.caves;
 
-import java.util.List;
-import java.util.Random;
-import java.util.Set;
-
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
-
 import mod.beethoven92.betterendforge.common.init.ModBiomes;
 import mod.beethoven92.betterendforge.common.init.ModTags;
 import mod.beethoven92.betterendforge.common.interfaces.IBiomeArray;
@@ -28,6 +23,10 @@ import net.minecraft.world.gen.Heightmap;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.NoFeatureConfig;
 
+import java.util.List;
+import java.util.Random;
+import java.util.Set;
+
 public abstract class EndCaveFeature extends Feature<NoFeatureConfig>
 {
 	protected static final BlockState CAVE_AIR = Blocks.CAVE_AIR.getDefaultState();
@@ -44,10 +43,6 @@ public abstract class EndCaveFeature extends Feature<NoFeatureConfig>
 	public boolean generate(ISeedReader world, ChunkGenerator generator, Random rand,
 			BlockPos pos, NoFeatureConfig config)
 	{
-		/*if (!(CommonConfig.isNewGeneratorEnabled() && GeneratorOptions.noRingVoid()) || pos.getX() * pos.getX() + pos.getZ() * pos.getZ() <= 22500)
-		{
-			return false;
-		}*/
 		if (!(GeneratorOptions.useNewGenerator() && GeneratorOptions.noRingVoid()))
 		{
 			if (pos.getX() * pos.getX() + pos.getZ() * pos.getZ() <= 22500)

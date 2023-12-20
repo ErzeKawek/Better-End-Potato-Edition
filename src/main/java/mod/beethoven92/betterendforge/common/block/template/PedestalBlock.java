@@ -138,7 +138,7 @@ public class PedestalBlock extends Block
 			Hand handIn, BlockRayTraceResult hit) 
 	{
 		if (worldIn.isRemote|| !state.isIn(this)) return ActionResultType.CONSUME;
-		if (!this.isPlaceable(state)) 
+		if (this.isNotPlaceable(state))
 		{
 			return ActionResultType.PASS;
 		}
@@ -167,23 +167,7 @@ public class PedestalBlock extends Block
 		}
 		return ActionResultType.PASS;
 	}
-	
-	/*public void checkRitual(World world, BlockPos pos) 
-	{
-		Mutable mut = new Mutable();
-		Point[] points = InfusionRitual.getMap();
-		for (Point p: points) 
-		{
-			mut.setPos(pos).move(p.x, 0, p.y);
-			BlockState state = world.getBlockState(mut);
-			if (state.getBlock() instanceof InfusionPedestal) 
-			{
-				((InfusionPedestal) state.getBlock()).checkRitual(world, mut);
-				break;
-			}
-		}
-	}*/
-	
+
 	@Override
 	public void onReplaced(BlockState state, World worldIn, BlockPos pos, BlockState newState, boolean isMoving)
 	{
@@ -239,7 +223,7 @@ public class PedestalBlock extends Block
 	{
 		BlockState updated = this.getUpdatedState(stateIn, facing, facingState, worldIn, currentPos, facingPos);
 		if (!updated.isIn(this)) return updated;
-		if (!this.isPlaceable(updated))
+		if (this.isNotPlaceable(updated))
 		{
 			this.moveStoredStack(worldIn, updated, currentPos);
 		}
@@ -316,7 +300,7 @@ public class PedestalBlock extends Block
 			BlockPos upPos = pos.up();
 			this.moveStoredStack(world, stack, world.getBlockState(upPos), upPos);
 		} 
-		else if (!this.isPlaceable(state)) 
+		else if (this.isNotPlaceable(state))
 		{
 			this.dropStoredStack(blockEntity, stack, pos);
 		} 
@@ -365,14 +349,14 @@ public class PedestalBlock extends Block
 		return this.getDropPos(world, pos.up());
 	}
 	
-	protected boolean isPlaceable(BlockState state)
+	protected boolean isNotPlaceable(BlockState state)
 	{
-		if (!state.isIn(this)) return false;
+		if (!state.isIn(this)) return true;
 		PedestalState currentState = state.get(STATE);
-		return currentState != PedestalState.BOTTOM &&
-			   currentState != PedestalState.COLUMN &&
-			   currentState != PedestalState.PILLAR &&
-			   currentState != PedestalState.COLUMN_TOP;
+		return currentState == PedestalState.BOTTOM ||
+				currentState == PedestalState.COLUMN ||
+				currentState == PedestalState.PILLAR ||
+				currentState == PedestalState.COLUMN_TOP;
 	}
 	
 	@Override

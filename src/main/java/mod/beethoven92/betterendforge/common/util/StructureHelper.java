@@ -1,6 +1,7 @@
 package mod.beethoven92.betterendforge.common.util;
 
 import com.google.common.collect.Sets;
+import mod.beethoven92.betterendforge.BetterEnd;
 import mod.beethoven92.betterendforge.common.init.ModBlocks;
 import mod.beethoven92.betterendforge.common.init.ModTags;
 import net.minecraft.block.BlockState;
@@ -46,7 +47,7 @@ public class StructureHelper
 		}
 		catch (IOException e) 
 		{
-			e.printStackTrace();
+			BetterEnd.LOGGER.error("Error occurs when reading structures", e);
 		}
 		return null;
 	}

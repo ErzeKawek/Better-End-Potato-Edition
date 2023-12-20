@@ -208,6 +208,7 @@ public class ModFeatures
     	BetterEnd.register(event.getRegistry(), UMBRELLA_MOSS, "umbrella_moss");
     	BetterEnd.register(event.getRegistry(), CREEPING_MOSS, "creeping_moss");   	
     	BetterEnd.register(event.getRegistry(), CHORUS_GRASS, "chorus_grass");
+		BetterEnd.register(event.getRegistry(), CHORUS_MUSHROOM, "chorus_mushroom");
     	BetterEnd.register(event.getRegistry(), CRYSTAL_GRASS, "crystal_grass");
     	BetterEnd.register(event.getRegistry(), AMBER_GRASS, "amber_grass");
     	BetterEnd.register(event.getRegistry(), SHADOW_PLANT, "shadow_plant");  	

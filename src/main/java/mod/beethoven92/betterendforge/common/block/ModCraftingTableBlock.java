@@ -57,8 +57,7 @@ public class ModCraftingTableBlock extends CraftingTableBlock {
 
 		@Override
 		public boolean canInteractWith(PlayerEntity playerIn) {
-			return worldPosCallable.applyOrElse((world, pos) -> !(world.getBlockState(pos).getBlock() instanceof ModCraftingTableBlock) ? false
-                    : playerIn.getDistanceSq(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5) <= 64d, true);
+			return worldPosCallable.applyOrElse((world, pos) -> world.getBlockState(pos).getBlock() instanceof ModCraftingTableBlock && playerIn.getDistanceSq(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5) <= 64d, true);
 		}
 
 	}

@@ -1,27 +1,15 @@
 package mod.beethoven92.betterendforge.config.jsons;
 
-import javax.annotation.Nullable;
-
 import mod.beethoven92.betterendforge.BetterEnd;
-import mod.beethoven92.betterendforge.config.jsons.JsonConfigKeeper.BooleanEntry;
-import mod.beethoven92.betterendforge.config.jsons.JsonConfigKeeper.Entry;
-import mod.beethoven92.betterendforge.config.jsons.JsonConfigKeeper.FloatEntry;
-import mod.beethoven92.betterendforge.config.jsons.JsonConfigKeeper.IntegerEntry;
-import mod.beethoven92.betterendforge.config.jsons.JsonConfigKeeper.RangeEntry;
-import mod.beethoven92.betterendforge.config.jsons.JsonConfigKeeper.StringEntry;
+import mod.beethoven92.betterendforge.config.jsons.JsonConfigKeeper.*;
+
+import javax.annotation.Nullable;
 
 public abstract class JsonConfig 
 {
-	public static final String CONFIG_SYNC_PREFIX = "CONFIG_";
 	protected final JsonConfigKeeper keeper;
 	protected final boolean autoSync;
 	public final String configID;
-
-
-
-	protected void registerEntries() {}
-	
-
 
 	protected JsonConfig(String modID, String group) {
 		this(modID, group, true, false);
@@ -35,7 +23,6 @@ public abstract class JsonConfig
 	{
 		configID = modID + "." + group;
 		this.keeper = new JsonConfigKeeper(group);
-		this.registerEntries();
 		this.autoSync = autoSync;
 
 	}
