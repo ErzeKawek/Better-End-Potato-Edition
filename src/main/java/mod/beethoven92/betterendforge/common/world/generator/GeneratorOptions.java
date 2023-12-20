@@ -5,7 +5,6 @@ import mod.beethoven92.betterendforge.config.Configs;
 //import net.minecraft.util.Mth;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
-//import ru.betterend.config.Configs;
 
 public class GeneratorOptions {
 	public static boolean vanillaEndIntegration;
