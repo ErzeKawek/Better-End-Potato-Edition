@@ -1,18 +1,22 @@
 {
-	"gui.jei.category.alloying": "Fonderia di Endstone",
-	"gui.jei.category.alloying.experience": "%s XP",
+    "gui.jei.category.alloying": "Fonderia di Endstone",
+    "gui.jei.category.alloying.experience": "%s XP",
 	"gui.jei.category.alloying.time.seconds": "%ss",
 	"gui.jei.category.infusion": "Infusione",
 	"gui.jei.category.infusion.time": "Tempo: %s",
 	"gui.jei.category.anvil_smithing": "Incudine",
 	"gui.jei.category.anvil_smithing.damage": "Danno: %s",
-	"item.betterendforge.guidebook": "L'End per tontoloni",
+  
+    "item.betterendforge.guidebook": "L'End per tontoloni",
 	"book.betterendforge.landing": "Breve guida per sopravvivere alle condizioni estreme dell'End",
 	"book.betterendforge.subtitle": "Sopravvivi nell'End",
+	
 	"itemGroup.betterendforge": "Better End",
+	
 	"container.betterendforge.end_stone_smelter": "Fonderia di Endstone",
+	
 	"biome.betterendforge.crystal_mountains": "Montagne cristalline",
-	"biome.betterendforge.foggy_mushroomland": "Terra di funghi nebbiosa",
+    "biome.betterendforge.foggy_mushroomland": "Terra di funghi nebbiosa",
 	"biome.betterendforge.dust_wastelands": "Lande polverose",
 	"biome.betterendforge.chorus_forest": "Foresta di Chorus",
 	"biome.betterendforge.megalake": "Megalago",
@@ -23,39 +27,49 @@
 	"biome.betterendforge.amber_land": "Terra d'ambra",
 	"biome.betterendforge.sulphur_springs": "Sorgenti solforose",
 	"biome.betterendforge.ice_starfield": "Campo stellare ghiacciato",
+	
 	"entity.betterendforge.dragonfly": "Libellula",
 	"item.betterendforge.spawn_egg_dragonfly": "Uovo generatore di libellula",
+	
 	"entity.betterendforge.end_slime": "Slime dell'End",
 	"item.betterendforge.spawn_egg_end_slime": "Uovo generatore di Slime dell'End",
+	
 	"entity.betterendforge.end_fish": "Pesce dell'End",
 	"item.betterendforge.spawn_egg_end_fish": "Uovo generatore di Pesce dell'End",
+	
 	"entity.betterendforge.shadow_walker": "Uomo ombra",
 	"item.betterendforge.spawn_egg_shadow_walker": "Uovo generatore di Uomo ombra",
+	
 	"entity.betterendforge.cubozoa": "Cubozoa",
 	"item.betterendforge.spawn_egg_cubozoa": "Uovo generatore di Cubozoa",
+	
 	"item.betterendforge.gelatine": "Gelatina",
 	"item.betterendforge.sweet_berry_jelly": "Gelatina di bacche dolci",
 	"item.betterendforge.shadow_berry_jelly": "Gelatina di bacche ombra",
+
 	"block.betterendforge.respawn_obelisk": "Obelisco della rinascita",
-	"message.betterendforge.set_spawn": "\u00A7b\u00A7lIl tuo punto di spawn ï¿½ stato impostato qui",
+	"message.betterendforge.set_spawn": "\u00A7b\u00A7lIl tuo punto di spawn è stato impostato qui",
 	"message.betterendforge.fail_spawn": "\u00A7c\u00A7lDevi tenere in mano 6 Gemme d'ambra per impostare il tuo punto di spawn",
+	
 	"block.betterendforge.dragon_tree_composter": "Compostiera di albero del drago",
 	"block.betterendforge.end_lotus_composter": "Compostiera di loto dell'End",
 	"block.betterendforge.helix_tree_composter": "Compostiera di albero elica",
 	"block.betterendforge.lacugrove_composter": "Compostiera di lacugrove",
 	"block.betterendforge.mossy_glowshroom_composter": "Compostiera di lumifungo muschioso",
 	"block.betterendforge.pythadendron_composter": "Compostiera di fitodendro",
-	"block.betterendforge.tenanea_composter": "Compostiera di tenanea",
+	"block.betterendforge.tenanea_composter": "Compostiera di tenanea",      
 	"block.betterendforge.umbrella_tree_composter": "Compostiera di albero ombrello",
-	"block.betterendforge.jellyshroom_composter": "Compostiera di fungo gelatinoso",
+	"block.betterendforge.jellyshroom_composter": "Compostiera di fungo gelatinoso",     
+	
 	"block.betterendforge.end_mycelium": "Micelio dell'End",
 	"block.betterendforge.end_moss": "Muschio dell'End",
 	"block.betterendforge.endstone_dust": "Polvere di Endstone",
-	"block.betterendforge.chorus_nylium": "Necelio di Chorus",
+	"block.betterendforge.chorus_nylium": "Necelio di Chorus",	
 	"block.betterendforge.cave_moss": "Muschio di caverna",
 	"block.betterendforge.crystal_moss": "Muschio cristallino",
 	"block.betterendforge.shadow_grass": "Erba ombrosa",
 	"block.betterendforge.pink_moss": "Muschio rosa",
+	
 	"block.betterendforge.end_mycelium_path": "Sentiero di micelio dell'End",
 	"block.betterendforge.end_moss_path": "Sentiero di muschio dell'End",
 	"block.betterendforge.chorus_nylium_path": "Sentiero di necelio di Chorus",
@@ -63,6 +77,7 @@
 	"block.betterendforge.crystal_moss_path": "Sentiero di muschio cristallino",
 	"block.betterendforge.shadow_grass_path": "Sentiero di erba ombrosa",
 	"block.betterendforge.pink_moss_path": "Sentiero di muschio rosa",
+
 	"block.betterendforge.amber_moss": "Muschio d'ambra",
 	"block.betterendforge.amber_moss_path": "Sentiero di muschio d'ambra",
 	"block.betterendforge.amber_grass": "Erba d'ambra",
@@ -87,13 +102,14 @@
 	"block.betterendforge.helix_tree_stripped_bark": "Legno di albero elica scortecciato",
 	"block.betterendforge.helix_tree_stripped_log": "Tronco di albero elica scortecciato",
 	"block.betterendforge.helix_tree_trapdoor": "Botola di albero elica",
-	"block.betterendforge.lanceleaf": "Foglia lancia",
-	"block.betterendforge.lanceleaf_seed": "Seme di Foglia lancia",
+    "block.betterendforge.lanceleaf": "Foglia lancia",
+	"block.betterendforge.lanceleaf_seed": "Seme di Foglia lancia",     
 	"block.betterendforge.glowing_pillar_leaves": "Foglie di pilastro luminoso",
 	"block.betterendforge.glowing_pillar_luminophor": "Luminofora di pilastro luminoso",
 	"block.betterendforge.glowing_pillar_roots": "Radici di pilastro luminoso",
-	"block.betterendforge.glowing_pillar_seed": "Seme di pilastro luminoso",
-	"block.betterendforge.bulb_moss": "Muschio lampadina",
+	"block.betterendforge.glowing_pillar_seed": "Seme di pilastro luminoso",     
+    "block.betterendforge.bulb_moss": "Muschio lampadina",
+	
 	"item.betterendforge.eternal_crystal": "Cristallo eterno",
 	"item.betterendforge.crystal_shards": "Frammenti di cristallo",
 	"item.betterendforge.ender_shard": "Frammenti di Ender",
@@ -129,6 +145,7 @@
 	"item.betterendforge.crystalite_helmet": "Elmo di cristallite",
 	"item.betterendforge.crystalite_leggings": "Gambiere di cristallite",
 	"item.betterendforge.crystalline_sulphur": "Zolfo",
+	
 	"effect.betterendforge.end_veil": "Velo dell'End",
 	"enchantment.betterendforge.end_veil": "Velo dell'End",
 	"item.minecraft.potion.effect.end_veil": "Pozione di Velo dell'End",
@@ -139,6 +156,7 @@
 	"item.minecraft.lingering_potion.effect.long_end_veil": "Pozione persistente di Velo dell'End",
 	"item.minecraft.tipped_arrow.effect.end_veil": "Freccia di velo dell'End",
 	"item.minecraft.tipped_arrow.effect.long_end_veil": "Freccia di velo dell'End",
+	
 	"block.betterendforge.aurora_crystal": "Cristallo dell'aurora",
 	"block.betterendforge.ender_ore": "Minerale Ender",
 	"block.betterendforge.terminite_block": "Blocco di terminite",
@@ -149,20 +167,23 @@
 	"block.betterendforge.end_portal_block": "Portale dell'End",
 	"block.betterendforge.eternal_pedestal": "Piedistallo eterno",
 	"block.betterendforge.flavolite_runed_eternal": "Flavolite runica eterna",
-	"block.betterendforge.andesite_pedestal": "Piedistallo di andesite",
+    
+    "block.betterendforge.andesite_pedestal": "Piedistallo di andesite",
 	"block.betterendforge.diorite_pedestal": "Piedistallo di diorite",
 	"block.betterendforge.granite_pedestal": "Piedistallo di granito",
 	"block.betterendforge.purpur_pedestal": "Piedistallo porpora",
 	"block.betterendforge.quartz_pedestal": "Piedistallo di quarzo",
 	"block.betterendforge.infusion_pedestal": "Piedistallo da infusione",
-	"block.betterendforge.umbrella_moss": "Muschio ombrello",
+    
+    "block.betterendforge.umbrella_moss": "Muschio ombrello",
 	"block.betterendforge.umbrella_moss_tall": "Muschio ombrello alto",
 	"block.betterendforge.creeping_moss": "Muschio rampicante",
 	"block.betterendforge.chorus_grass": "Erba di Chorus",
 	"block.betterendforge.cave_grass": "Erba di cavernas",
 	"block.betterendforge.crystal_grass": "Erba di cristallo",
 	"block.betterendforge.shadow_plant": "Pianta ombrosa",
-	"block.betterendforge.bushy_grass": "Erba cespugliosa",
+    "block.betterendforge.bushy_grass": "Erba cespugliosa",
+    
 	"block.betterendforge.blue_vine_seed": "Seme di rampicante blu",
 	"block.betterendforge.blue_vine": "Rampicante blu",
 	"block.betterendforge.blue_vine_lantern": "Lanterna di rampicante blu",
@@ -194,15 +215,18 @@
 	"block.betterendforge.charnia_purple": "Charnia viola",
 	"block.betterendforge.charnia_red": "Charnia rosso",
 	"block.betterendforge.charnia_green": "Charnia verde",
+	
 	"block.betterendforge.brimstone": "Zolfo",
 	"block.betterendforge.sulphur_crystal": "Cristallo di zolfo",
 	"block.betterendforge.hydrothermal_vent": "Sfiato idrotermale",
 	"block.betterendforge.tube_worm": "Verme tubo",
 	"block.betterendforge.vent_bubble_column": "Colonna di bolle dello sfiato",
+	
 	"block.betterendforge.dense_snow": "Neve densa",
 	"block.betterendforge.emerald_ice": "Ghiaccio smeraldino",
 	"block.betterendforge.dense_emerald_ice": "Ghiaccio smeraldino denso",
 	"block.betterendforge.ancient_emerald_ice": "Ghiaccio smeraldino antico",
+	
 	"block.betterendforge.hydralux_sapling": "Arboscello di idroluce",
 	"block.betterendforge.hydralux_petal_block": "Blocco di petali di idroluce",
 	"block.betterendforge.hydralux_petal_block_black": "Blocco di petali nero",
@@ -222,18 +246,23 @@
 	"block.betterendforge.hydralux_petal_block_white": "Blocco di petali bianco",
 	"block.betterendforge.hydralux_petal_block_yellow": "Blocco di petali giallo",
 	"item.betterendforge.hydralux_petal": "Petalo di idroluce",
+	
 	"item.betterendforge.end_lily_leaf": "Foglia di giglio dell'End",
 	"item.betterendforge.end_lily_leaf_dried": "Foglia di giglio dell'End essiccata",
+	
 	"item.betterendforge.shadow_berry_cooked": "Bacca ombra cotta",
 	"item.betterendforge.shadow_berry_raw": "Bacca ombra",
+
 	"item.betterendforge.bucket_end_fish": "Secchio con pesce dell'End",
 	"item.betterendforge.end_fish_cooked": "Pesce dell'End cotto",
 	"item.betterendforge.end_fish_raw": "Pesce dell'end",
+
 	"block.betterendforge.amber_block": "Blocco d'ambra",
 	"block.betterendforge.amber_ore": "Ambra grezza",
 	"item.betterendforge.amber_gem": "Gemma d'ambra",
 	"item.betterendforge.raw_amber": "Ambra",
-	"block.betterendforge.mossy_glowshroom_sapling": "Arboscello di lumifungo muschioso",
+	
+    "block.betterendforge.mossy_glowshroom_sapling": "Arboscello di lumifungo muschioso",
 	"block.betterendforge.mossy_glowshroom_cap": "Cappello di lumifungo muschioso",
 	"block.betterendforge.mossy_glowshroom_fur": "Pelame di lumifungo muschioso",
 	"block.betterendforge.mossy_glowshroom_hymenophore": "Imenoforo di lumifungo muschioso",
@@ -255,7 +284,8 @@
 	"block.betterendforge.mossy_glowshroom_stripped_bark": "Legno di lumifungo muschioso scortecciato",
 	"block.betterendforge.mossy_glowshroom_stripped_log": "Tronco di lumifungo muschioso scortecciato",
 	"block.betterendforge.mossy_glowshroom_trapdoor": "Botola di lumifungo muschioso",
-	"block.betterendforge.end_lotus_bark": "Legno di loto dell'End",
+	
+    "block.betterendforge.end_lotus_bark": "Legno di loto dell'End",
 	"block.betterendforge.end_lotus_barrel": "Barile di loto dell'End",
 	"block.betterendforge.end_lotus_button": "Pulsante di loto dell'End",
 	"block.betterendforge.end_lotus_chest": "Baule di loto dell'End",
@@ -273,6 +303,7 @@
 	"block.betterendforge.end_lotus_stripped_bark": "Legno di loto dell'End scortecciato",
 	"block.betterendforge.end_lotus_stripped_log": "Tegno di loto dell'End scortecciato",
 	"block.betterendforge.end_lotus_trapdoor": "Botola di loto dell'End",
+    
 	"block.betterendforge.lacugrove_leaves": "Foglie di lacugrove",
 	"block.betterendforge.lacugrove_sapling": "Arboscello di lacugrove",
 	"block.betterendforge.lacugrove_bark": "Legno di lacugrove",
@@ -293,6 +324,7 @@
 	"block.betterendforge.lacugrove_stripped_bark": "Legno di lacugrove scortecciato",
 	"block.betterendforge.lacugrove_stripped_log": "Tronco di lacugrove scortecciato",
 	"block.betterendforge.lacugrove_trapdoor": "Botola di lacugrove",
+	
 	"block.betterendforge.pythadendron_leaves": "Foglie di fitodendro",
 	"block.betterendforge.pythadendron_sapling": "Arboscello di fitodendro",
 	"block.betterendforge.pythadendron_bark": "Legno di fitodendro",
@@ -313,9 +345,10 @@
 	"block.betterendforge.pythadendron_stripped_bark": "Legno di fitodendro scortecciato",
 	"block.betterendforge.pythadendron_stripped_log": "Tronco di fitodendro scortecciato",
 	"block.betterendforge.pythadendron_trapdoor": "Botola di fitodendro",
+	
 	"block.betterendforge.dragon_tree_leaves": "Foglie di albero del drago",
 	"block.betterendforge.dragon_tree_sapling": "Arboscello di albero del drago",
-	"block.betterendforge.dragon_tree_bark": "Legno di albero del drago",
+    "block.betterendforge.dragon_tree_bark": "Legno di albero del drago",
 	"block.betterendforge.dragon_tree_barrel": "Barile di albero del drago",
 	"block.betterendforge.dragon_tree_button": "Pulsante di albero del drago",
 	"block.betterendforge.dragon_tree_chest": "Baule di albero del drago",
@@ -333,6 +366,7 @@
 	"block.betterendforge.dragon_tree_stripped_bark": "Legno di albero del drago scortecciato",
 	"block.betterendforge.dragon_tree_stripped_log": "Tronco di albero del drago scortecciato",
 	"block.betterendforge.dragon_tree_trapdoor": "Botola di albero del drago",
+	
 	"block.betterendforge.tenanea_flowers": "Fiori di tenanea",
 	"block.betterendforge.tenanea_outer_leaves": "Foglie esterne di tenanea",
 	"block.betterendforge.tenanea_bark": "Legno di tenanea",
@@ -356,6 +390,7 @@
 	"block.betterendforge.tenanea_stripped_bark": "Legno di tenanea scortecciato",
 	"block.betterendforge.tenanea_stripped_log": "Tronco di tenanea scortecciato",
 	"block.betterendforge.tenanea_trapdoor": "Botola di tenanea",
+	
 	"block.betterendforge.violecite": "Violecite",
 	"block.betterendforge.violecite_bricks": "Mattoni di violecite",
 	"block.betterendforge.violecite_bricks_slab": "Lastra di mattoni di violecite",
@@ -370,6 +405,7 @@
 	"block.betterendforge.violecite_polished": "Violecite levigata",
 	"block.betterendforge.violecite_wall": "Muretto di violecite",
 	"block.betterendforge.violecite_pedestal": "Piedistallo di violecite",
+	
 	"block.betterendforge.flavolite": "Flavolite",
 	"block.betterendforge.flavolite_bricks": "Mattoni di flavolite",
 	"block.betterendforge.flavolite_bricks_slab": "Lastra di mattoni di flavolite",
@@ -384,6 +420,7 @@
 	"block.betterendforge.flavolite_polished": "Flavolite levigata",
 	"block.betterendforge.flavolite_wall": "Muretto di flavolite",
 	"block.betterendforge.flavolite_pedestal": "Piedistallo di flavolite",
+	
 	"block.betterendforge.sulphuric_rock": "Roccia sulfurea",
 	"block.betterendforge.sulphuric_rock_bricks": "Mattoni di roccia sulfurea",
 	"block.betterendforge.sulphuric_rock_bricks_slab": "Lastra di mattoni di roccia sulfurea",

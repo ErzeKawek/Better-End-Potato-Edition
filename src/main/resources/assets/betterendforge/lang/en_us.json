@@ -1,24 +1,30 @@
 {
-	"attribute.name.generic.blindness_resistance": "Blindness Resistance",
-	"gui.jei.category.alloying": "Alloying",
-	"gui.jei.category.alloying.experience": "%s XP",
+  "attribute.name.generic.blindness_resistance": "Blindness Resistance",
+    "gui.jei.category.alloying": "Alloying",
+    "gui.jei.category.alloying.experience": "%s XP",
 	"gui.jei.category.alloying.time.seconds": "%ss",
 	"gui.jei.category.infusion": "Infusion",
 	"gui.jei.category.infusion.time": "Time: %s",
 	"gui.jei.category.anvil_smithing": "Anvil Smithing",
-	"gui.jei.category.anvil_smithing.damage": "Tool damage: %s",
-	"item.betterendforge.guidebook": "The End for Dummies",
+    "gui.jei.category.anvil_smithing.damage": "Tool damage: %s",
+    
+    "item.betterendforge.guidebook": "The End for Dummies",
 	"book.betterendforge.landing": "A short guide about surviving in the extreme conditions of The End.",
 	"book.betterendforge.subtitle": "Survive in The End",
 	"message.betterendforge.patchouli_missing": "Install Patchouli to read the guide book",
+	
 	"itemGroup.betterendforge": "Better End",
+	
 	"container.betterendforge.end_stone_smelter": "End Stone Smelter",
+
 	"message.betterendforge.anvil_damage": "§cDamage",
+
+
 	"block.betterendforge.lumecorn": "Lumecorn",
 	"block.betterendforge.lumecorn_seed": "Lumecorn Seed",
-	"item.betterendforge.lumecorn_rod": "Lumecorn Rod",
-	"block.betterendforge.blooming_cooksonia": "Blooming Cooksonia",
-	"block.betterendforge.salteago": "Salteago",
+	"item.betterendforge.lumecorn_rod": "Lumecorn Rod",  
+ 	"block.betterendforge.blooming_cooksonia": "Blooming Cooksonia",  
+    "block.betterendforge.salteago": "Salteago",  
 	"block.betterendforge.vaiolush_fern": "Vaiolush Fern",
 	"block.betterendforge.fracturn": "Fracturn",
 	"biome.betterendforge.dry_shrubland": "Dry Shrubland",
@@ -26,7 +32,8 @@
 	"block.betterendforge.neon_cactus": "Neon Cactus",
 	"block.betterendforge.neon_cactus_block": "Neon Cactus Block",
 	"block.betterendforge.neon_cactus_slab": "Neon Cactus Slab",
-	"block.betterendforge.neon_cactus_stairs": "Neon Cactus Stairs",
+	"block.betterendforge.neon_cactus_stairs": "Neon Cactus Stairs", 
+
 	"item.betterendforge.music_disc_strange_and_alien": "§bMusic Disc§r",
 	"item.betterendforge.music_disc_strange_and_alien.desc": "§5Firel§r - §fStrange And Alien§r",
 	"item.betterendforge.music_disc_grasping_at_stars": "§bMusic Disc§r",
@@ -35,6 +42,7 @@
 	"item.betterendforge.music_disc_endseeker.desc": "§5Firel§r - §fEndseeker§r",
 	"item.betterendforge.music_disc_eo_dracona": "§bMusic Disc§r",
 	"item.betterendforge.music_disc_eo_dracona.desc": "§5Firel§r - §fEo Dracona§r",
+
 	"block.betterendforge.rutiscus": "Rutiscus",
 	"block.betterendforge.rutiscus_path": "Rutiscus Path",
 	"biome.betterendforge.lantern_woods": "Lantern Woods",
@@ -63,7 +71,7 @@
 	"block.betterendforge.lucernia_stairs": "Lucernia Stairs",
 	"block.betterendforge.lucernia_stripped_bark": "Stripped Lucernia Bark",
 	"block.betterendforge.lucernia_stripped_log": "Stripped Lucernia Log",
-	"block.betterendforge.lucernia_trapdoor": "Lucernia Trapdoor",
+	"block.betterendforge.lucernia_trapdoor": "Lucernia Trapdoor",   
 	"block.betterendforge.flamaea": "Flamaea",
 	"block.betterendforge.aeridium": "Aeridium",
 	"block.betterendforge.lamellarium": "Lamellarium",
@@ -73,6 +81,8 @@
 	"block.betterendforge.ruscus": "Ruscus",
 	"block.betterendforge.lutebus": "Lutebus",
 	"block.betterendforge.orango": "Orango",
+
+
 	"block.betterendforge.sangnum": "Sangnum",
 	"block.betterendforge.sangnum_path": "Sangnum Path",
 	"block.betterendforge.mossy_obsidian": "Mossy Obsidian",
@@ -81,7 +91,7 @@
 	"block.betterendforge.amaranita_hymenophore": "Amaranita Hymenophore",
 	"block.betterendforge.amaranita_hyphae": "Amaranita Hyphae",
 	"block.betterendforge.amaranita_lantern": "Amaranita Lantern",
-	"block.betterendforge.amaranita_stem": "Amaranita Stem",
+	"block.betterendforge.amaranita_stem": "Amaranita Stem",       
 	"block.betterendforge.large_amaranita_mushroom": "Large Amaranita Mushroom",
 	"block.betterendforge.small_amaranita_mushroom": "Small Amaranita Mushroom",
 	"block.betterendforge.globulagus": "Globulagus",
@@ -89,10 +99,11 @@
 	"block.betterendforge.dragon_bone_block": "Dragon Bone Block",
 	"block.betterendforge.dragon_bone_slab": "Dragon Bone Slab",
 	"block.betterendforge.dragon_bone_stairs": "Dragon Bone Stairs",
-	"block.betterendforge.mossy_dragon_bone": "Mossy Dragon Bone",
+	"block.betterendforge.mossy_dragon_bone": "Mossy Dragon Bone",  
+	
 	"biome.betterendforge.dragon_graveyards": "Dragon Graveyards",
 	"biome.betterendforge.crystal_mountains": "Crystal Mountains",
-	"biome.betterendforge.foggy_mushroomland": "Foggy Mushroomland",
+    "biome.betterendforge.foggy_mushroomland": "Foggy Mushroomland",
 	"biome.betterendforge.dust_wastelands": "Dust Wastelands",
 	"biome.betterendforge.chorus_forest": "Chorus Forest",
 	"biome.betterendforge.megalake": "Megalake",
@@ -104,17 +115,19 @@
 	"biome.betterendforge.sulphur_springs": "Sulfur Springs",
 	"biome.betterendforge.ice_starfield": "Ice Starfield",
 	"biome.betterendforge.umbrella_jungle": "Umbrella Jungle",
-	"biome.betterendforge.glowing_grasslands": "Glowing Grasslands",
+    "biome.betterendforge.glowing_grasslands": "Glowing Grasslands",
 	"biome.betterendforge.empty_aurora_cave": "Empty Aurora Cave",
 	"biome.betterendforge.empty_end_cave": "Empty End Cave",
 	"biome.betterendforge.empty_smaragdant_cave": "Empty Smaragdant Cave",
 	"biome.betterendforge.lush_aurora_cave": "Lush Aurora Cave",
 	"biome.betterendforge.lush_smaragdant_cave": "Lush Smaragdant Cave",
+	
 	"block.betterendforge.silk_moth_nest": "Silk Moth Nest",
 	"entity.betterendforge.silk_moth": "Silk Moth",
 	"item.betterendforge.spawn_egg_silk_moth": "Silk Moth Spawn Egg",
 	"item.betterendforge.silk_fiber": "Silk Fiber",
-	"block.betterendforge.iron_bulb_lantern": "Iron Bulb Lantern",
+
+	"block.betterendforge.iron_bulb_lantern": "Iron Bulb Lantern",   
 	"block.betterendforge.iron_bulb_lantern_black": "Black Iron Bulb Lantern",
 	"block.betterendforge.iron_bulb_lantern_blue": "Blue Iron Bulb Lantern",
 	"block.betterendforge.iron_bulb_lantern_brown": "Brown Iron Bulb Lantern",
@@ -130,51 +143,62 @@
 	"block.betterendforge.iron_bulb_lantern_purple": "Purple Iron Bulb Lantern",
 	"block.betterendforge.iron_bulb_lantern_red": "Red Iron Bulb Lantern",
 	"block.betterendforge.iron_bulb_lantern_white": "White Iron Bulb Lantern",
-	"block.betterendforge.iron_bulb_lantern_yellow": "Yellow Iron Bulb Lantern",
+	"block.betterendforge.iron_bulb_lantern_yellow": "Yellow Iron Bulb Lantern", 
+	
 	"entity.betterendforge.dragonfly": "Dragonfly",
 	"item.betterendforge.spawn_egg_dragonfly": "Dragonfly Spawn Egg",
+	
 	"entity.betterendforge.end_slime": "End Slime",
 	"item.betterendforge.spawn_egg_end_slime": "End Slime Spawn Egg",
+	
 	"entity.betterendforge.end_fish": "End Fish",
 	"item.betterendforge.spawn_egg_end_fish": "End Fish Spawn Egg",
+	
 	"entity.betterendforge.shadow_walker": "Shadow Walker",
 	"item.betterendforge.spawn_egg_shadow_walker": "Shadow Walker Spawn Egg",
+	
 	"entity.betterendforge.cubozoa": "Cubozoa",
 	"item.betterendforge.spawn_egg_cubozoa": "Cubozoa Spawn Egg",
+	
 	"item.betterendforge.gelatine": "Gelatine",
 	"item.betterendforge.sweet_berry_jelly": "Sweet Berry Jelly",
 	"item.betterendforge.shadow_berry_jelly": "Shadow Berry Jelly",
+
 	"block.betterendforge.respawn_obelisk": "Respawn Obelisk",
 	"message.betterendforge.set_spawn": "\u00A7b\u00A7lYour spawn point is set here",
-	"message.betterendforge.fail_spawn": "\u00A7c\u00A7lYour need to hold 6 Amber Gems to set your spawn point",
+	"message.betterendforge.fail_spawn": "\u00A7c\u00A7lYour need to hold 6 Amber Gems to set your spawn point",     
+
 	"block.betterendforge.dragon_tree_composter": "Dragon Tree Composter",
 	"block.betterendforge.end_lotus_composter": "End Lotus Composter",
 	"block.betterendforge.helix_tree_composter": "Helix Tree Composter",
 	"block.betterendforge.lacugrove_composter": "Lacugrove Composter",
 	"block.betterendforge.mossy_glowshroom_composter": "Mossy Glowshroom Composter",
 	"block.betterendforge.pythadendron_composter": "Pythadendron Composter",
-	"block.betterendforge.tenanea_composter": "Tenanea Composter",
+	"block.betterendforge.tenanea_composter": "Tenanea Composter",      
 	"block.betterendforge.umbrella_tree_composter": "Umbrella Tree Composter",
 	"block.betterendforge.jellyshroom_composter": "Jellyshroom Composter",
+
 	"block.betterendforge.andesite_lantern": "Andesite Lantern",
 	"block.betterendforge.blackstone_lantern": "Blackstone Lantern",
 	"block.betterendforge.diorite_lantern": "Diorite Lantern",
 	"block.betterendforge.granite_lantern": "Granite Lantern",
 	"block.betterendforge.purpur_lantern": "Purpur Lantern",
-	"block.betterendforge.quartz_lantern": "Quartz Lantern",
-	"block.betterendforge.end_stone_lantern": "End Stone Lantern",
+	"block.betterendforge.quartz_lantern": "Quartz Lantern",   
+	"block.betterendforge.end_stone_lantern": "End Stone Lantern", 
 	"block.betterendforge.gold_chandelier": "Gold Chandelier",
-	"block.betterendforge.iron_chandelier": "Iron Chandelier",
+	"block.betterendforge.iron_chandelier": "Iron Chandelier",  
+	
 	"block.betterendforge.end_mycelium": "End Mycelium",
 	"block.betterendforge.end_moss": "End Moss",
 	"block.betterendforge.endstone_dust": "End Stone Dust",
-	"block.betterendforge.chorus_nylium": "Chorus Nylium",
+	"block.betterendforge.chorus_nylium": "Chorus Nylium",	
 	"block.betterendforge.cave_moss": "Cave Moss",
 	"block.betterendforge.crystal_moss": "Crystal Moss",
 	"block.betterendforge.shadow_grass": "Shadow Grass",
 	"block.betterendforge.pink_moss": "Pink Moss",
 	"block.betterendforge.amber_moss": "Amber Moss",
 	"block.betterendforge.jungle_moss": "Jungle Moss",
+	
 	"block.betterendforge.end_mycelium_path": "End Mycelium Path",
 	"block.betterendforge.end_moss_path": "End Moss Path",
 	"block.betterendforge.chorus_nylium_path": "Chorus Nylium Path",
@@ -184,6 +208,7 @@
 	"block.betterendforge.pink_moss_path": "Pink Moss Path",
 	"block.betterendforge.amber_moss_path": "Amber Moss Path",
 	"block.betterendforge.jungle_moss_path": "Jungle Moss Path",
+
 	"block.betterendforge.helix_tree_bark": "Helix Tree Bark",
 	"block.betterendforge.helix_tree_barrel": "Helix Tree Barrel",
 	"block.betterendforge.helix_tree_bookshelf": "Helix Tree Bookshelf",
@@ -205,13 +230,14 @@
 	"block.betterendforge.helix_tree_stripped_bark": "Stripped Helix Tree Bark",
 	"block.betterendforge.helix_tree_stripped_log": "Stripped Helix Tree Log",
 	"block.betterendforge.helix_tree_trapdoor": "Helix Tree Trapdoor",
-	"block.betterendforge.lanceleaf": "Lanceleaf",
-	"block.betterendforge.lanceleaf_seed": "Lanceleaf Seed",
+    "block.betterendforge.lanceleaf": "Lanceleaf",
+	"block.betterendforge.lanceleaf_seed": "Lanceleaf Seed",     
 	"block.betterendforge.glowing_pillar_leaves": "Glowing Pillar Leaves",
 	"block.betterendforge.glowing_pillar_luminophor": "Glowing Pillar Luminophor",
 	"block.betterendforge.glowing_pillar_roots": "Glowing Pillar Roots",
-	"block.betterendforge.glowing_pillar_seed": "Glowing Pillar Seed",
-	"block.betterendforge.bulb_moss": "Bulb Moss",
+	"block.betterendforge.glowing_pillar_seed": "Glowing Pillar Seed",     
+    "block.betterendforge.bulb_moss": "Bulb Moss",
+	
 	"item.betterendforge.eternal_crystal": "Eternal Crystal",
 	"item.betterendforge.crystal_shards": "Crystal Shards",
 	"item.betterendforge.ender_shard": "Ender Shard",
@@ -246,6 +272,7 @@
 	"item.betterendforge.leather_stripe": "Leather Stripe",
 	"item.betterendforge.leather_wrapped_stick": "Leather Wrapped Stick",
 	"item.betterendforge.glowing_bulb": "Glowing Bulb",
+	
 	"enchantment.betterendforge.end_veil.desc": "Wearing an helmet enchanted with this prevents endermen from aggroing when you look at them",
 	"effect.betterendforge.end_veil": "End Veil",
 	"enchantment.betterendforge.end_veil": "End Veil",
@@ -257,6 +284,7 @@
 	"item.minecraft.lingering_potion.effect.long_end_veil": "Lingering Potion of End Veil",
 	"item.minecraft.tipped_arrow.effect.end_veil": "Arrow of End Veil",
 	"item.minecraft.tipped_arrow.effect.long_end_veil": "Arrow of End Veil",
+	
 	"block.betterendforge.aurora_crystal": "Aurora Crystal",
 	"block.betterendforge.ender_ore": "Ender Ore",
 	"block.betterendforge.aeternium_block": "Aeternium Block",
@@ -268,28 +296,31 @@
 	"block.betterendforge.flavolite_runed_eternal": "Eternal Runed Flavolite",
 	"block.betterendforge.end_stone_furnace": "End Stone Furnace",
 	"block.betterendforge.aeternium_anvil": "Aeternium Anvil",
-	"block.betterendforge.missing_tile": "Missing Tile",
-	"block.betterendforge.end_stone_stalactite": "End Stone Stalactite",
+    "block.betterendforge.missing_tile": "Missing Tile",
+    "block.betterendforge.end_stone_stalactite": "End Stone Stalactite",
 	"block.betterendforge.end_stone_stalactite_cavemoss": "Cave Moss Endstone Stalactite",
 	"block.betterendforge.smaragdant_crystal": "Smaragdant Crystal",
 	"block.betterendforge.smaragdant_crystal_shard": "Smaragdant Crystal Shard",
 	"block.betterendforge.rubinea": "Rubinea",
-	"block.betterendforge.andesite_pedestal": "Andesite Pedestal",
+	
+    "block.betterendforge.andesite_pedestal": "Andesite Pedestal",
 	"block.betterendforge.diorite_pedestal": "Diorite Pedestal",
 	"block.betterendforge.granite_pedestal": "Granite Pedestal",
 	"block.betterendforge.purpur_pedestal": "Purpur Pedestal",
 	"block.betterendforge.quartz_pedestal": "Quartz Pedestal",
 	"block.betterendforge.infusion_pedestal": "Infusion Pedestal",
-	"block.betterendforge.umbrella_moss": "Umbrella Moss",
+    
+    "block.betterendforge.umbrella_moss": "Umbrella Moss",
 	"block.betterendforge.umbrella_moss_tall": "Tall Umbrella Moss",
 	"block.betterendforge.creeping_moss": "Creeping Moss",
 	"block.betterendforge.chorus_grass": "Chorus Grass",
 	"block.betterendforge.cave_grass": "Cave Grass",
 	"block.betterendforge.crystal_grass": "Crystal Grass",
 	"block.betterendforge.shadow_plant": "Shadow Plant",
-	"block.betterendforge.bushy_grass": "Bushy Grass",
-	"block.betterendforge.amber_grass": "Amber Grass",
-	"block.betterendforge.jungle_grass": "Jungle Grass",
+    "block.betterendforge.bushy_grass": "Bushy Grass",
+    "block.betterendforge.amber_grass": "Amber Grass",
+    "block.betterendforge.jungle_grass": "Jungle Grass",
+    
 	"block.betterendforge.blue_vine_seed": "Blue Vine Seed",
 	"block.betterendforge.blue_vine": "Blue Vine",
 	"block.betterendforge.blue_vine_lantern": "Blue Vine Lantern",
@@ -332,15 +363,18 @@
 	"block.betterendforge.amber_root_seed": "Amber Root Seed",
 	"block.betterendforge.chorus_mushroom_seed": "Chorus Mushroom Seed",
 	"block.betterendforge.pearlberry_seed": "Pearlberry Seed",
+	
 	"block.betterendforge.brimstone": "Brimstone",
 	"block.betterendforge.sulphur_crystal": "Sulfur Crystal",
 	"block.betterendforge.hydrothermal_vent": "Hydrothermal Vent",
 	"block.betterendforge.tube_worm": "Tube Worm",
 	"block.betterendforge.vent_bubble_column": "Vent Bubble Column",
+	
 	"block.betterendforge.dense_snow": "Dense Snow",
 	"block.betterendforge.emerald_ice": "Emerald Ice",
 	"block.betterendforge.dense_emerald_ice": "Dense Emerald Ice",
 	"block.betterendforge.ancient_emerald_ice": "Ancient Emerald Ice",
+	
 	"block.betterendforge.hydralux_sapling": "Hydralux Sapling",
 	"block.betterendforge.hydralux_petal_block": "Hydralux Petal Block",
 	"block.betterendforge.hydralux_petal_block_black": "Black Petal Block",
@@ -361,8 +395,10 @@
 	"block.betterendforge.hydralux_petal_block_yellow": "Yellow Petal Block",
 	"item.betterendforge.hydralux_petal": "Hydralux Petal",
 	"item.betterendforge.enchanted_petal": "Enchanted Petal",
+	
 	"item.betterendforge.end_lily_leaf": "End Lily Leaf",
 	"item.betterendforge.end_lily_leaf_dried": "End Lily Leaf Dried",
+	
 	"item.betterendforge.shadow_berry_cooked": "Shadow Berry Cooked",
 	"item.betterendforge.shadow_berry_raw": "Shadow Berry",
 	"item.betterendforge.umbrella_cluster_juice": "Umbrella Cluster Juice",
@@ -370,15 +406,18 @@
 	"item.betterendforge.amber_root_raw": "Raw Amber Root",
 	"item.betterendforge.chorus_mushroom_cooked": "Cooked Chorus Mushroom",
 	"item.betterendforge.chorus_mushroom_raw": "Raw Chorus Mushroom",
+
 	"item.betterendforge.bucket_end_fish": "End Fish Bucket",
 	"item.betterendforge.bucket_cubozoa": "Cubozoa Bucket",
 	"item.betterendforge.end_fish_cooked": "Cooked End Fish",
 	"item.betterendforge.end_fish_raw": "End Fish",
+
 	"block.betterendforge.amber_block": "Amber Block",
 	"block.betterendforge.amber_ore": "Amber Ore",
 	"item.betterendforge.amber_gem": "Amber Gem",
 	"item.betterendforge.raw_amber": "Raw Amber",
-	"block.betterendforge.mossy_glowshroom_sapling": "Mossy Glowshroom Sapling",
+	
+    "block.betterendforge.mossy_glowshroom_sapling": "Mossy Glowshroom Sapling",
 	"block.betterendforge.mossy_glowshroom_cap": "Mossy Glowshroom Cap",
 	"block.betterendforge.mossy_glowshroom_fur": "Mossy Glowshroom Fur",
 	"block.betterendforge.mossy_glowshroom_hymenophore": "Mossy Glowshroom Hymenophore",
@@ -401,7 +440,8 @@
 	"block.betterendforge.mossy_glowshroom_stripped_log": "Mossy Glowshroom Stripped Log",
 	"block.betterendforge.mossy_glowshroom_trapdoor": "Mossy Glowshroom Trapdoor",
 	"block.betterendforge.mossy_glowshroom_bookshelf": "Mossy Glowshroom Bookshelf",
-	"block.betterendforge.end_lotus_bark": "End Lotus Bark",
+	
+    "block.betterendforge.end_lotus_bark": "End Lotus Bark",
 	"block.betterendforge.end_lotus_barrel": "End Lotus Barrel",
 	"block.betterendforge.end_lotus_button": "End Lotus Button",
 	"block.betterendforge.end_lotus_chest": "End Lotus Chest",
@@ -420,6 +460,7 @@
 	"block.betterendforge.end_lotus_stripped_log": "End Lotus Stripped Log",
 	"block.betterendforge.end_lotus_trapdoor": "End Lotus Trapdoor",
 	"block.betterendforge.end_lotus_bookshelf": "End Lotus Bookshelf",
+    
 	"block.betterendforge.lacugrove_leaves": "Lacugrove Leaves",
 	"block.betterendforge.lacugrove_sapling": "Lacugrove Sapling",
 	"block.betterendforge.lacugrove_bark": "Lacugrove Bark",
@@ -441,6 +482,7 @@
 	"block.betterendforge.lacugrove_stripped_log": "Lacugrove Stripped Log",
 	"block.betterendforge.lacugrove_trapdoor": "Lacugrove Trapdoor",
 	"block.betterendforge.lacugrove_bookshelf": "Lacugrove Bookshelf",
+	
 	"block.betterendforge.pythadendron_leaves": "Pythadendron Leaves",
 	"block.betterendforge.pythadendron_sapling": "Pythadendron Sapling",
 	"block.betterendforge.pythadendron_bark": "Pythadendron Bark",
@@ -462,9 +504,10 @@
 	"block.betterendforge.pythadendron_stripped_log": "Pythadendron Stripped Log",
 	"block.betterendforge.pythadendron_trapdoor": "Pythadendron Trapdoor",
 	"block.betterendforge.pythadendron_bookshelf": "Pythadendron Bookshelf",
+	
 	"block.betterendforge.dragon_tree_leaves": "Dragon Tree Leaves",
 	"block.betterendforge.dragon_tree_sapling": "Dragon Tree Sapling",
-	"block.betterendforge.dragon_tree_bark": "Dragon Tree Bark",
+    "block.betterendforge.dragon_tree_bark": "Dragon Tree Bark",
 	"block.betterendforge.dragon_tree_barrel": "Dragon Tree Barrel",
 	"block.betterendforge.dragon_tree_button": "Dragon Tree Button",
 	"block.betterendforge.dragon_tree_chest": "Dragon Tree Chest",
@@ -483,6 +526,7 @@
 	"block.betterendforge.dragon_tree_stripped_log": "Dragon Tree Stripped Log",
 	"block.betterendforge.dragon_tree_trapdoor": "Dragon Tree Trapdoor",
 	"block.betterendforge.dragon_tree_bookshelf": "Dragon Tree Bookshelf",
+	
 	"block.betterendforge.tenanea_flowers": "Tenanea Flowers",
 	"block.betterendforge.tenanea_outer_leaves": "Tenanea Outer Leaves",
 	"block.betterendforge.tenanea_bark": "Tenanea Bark",
@@ -506,6 +550,7 @@
 	"block.betterendforge.tenanea_stripped_bark": "Stripped Tenanea Bark",
 	"block.betterendforge.tenanea_stripped_log": "Stripped Tenanea Log",
 	"block.betterendforge.tenanea_trapdoor": "Tenanea Trapdoor",
+	
 	"block.betterendforge.umbrella_tree_sapling": "Umbrella Tree Sapling",
 	"block.betterendforge.umbrella_tree_bark": "Umbrella Tree Bark",
 	"block.betterendforge.umbrella_tree_barrel": "Umbrella Tree Barrel",
@@ -528,6 +573,7 @@
 	"block.betterendforge.umbrella_tree_stripped_log": "Stripped Umbrella Tree Log",
 	"block.betterendforge.umbrella_tree_trapdoor": "Umbrella Tree Trapdoor",
 	"block.betterendforge.umbrella_tree_membrane": "Umbrella Tree Membrane",
+	
 	"block.betterendforge.jellyshroom_bark": "Jellyshroom Bark",
 	"block.betterendforge.jellyshroom_barrel": "Jellyshroom Barrel",
 	"block.betterendforge.jellyshroom_bookshelf": "Jellyshroom Bookshelf",
@@ -549,6 +595,7 @@
 	"block.betterendforge.jellyshroom_stripped_bark": "Stripped Jellyshroom Bark",
 	"block.betterendforge.jellyshroom_stripped_log": "Stripped Jellyshroom Log",
 	"block.betterendforge.jellyshroom_trapdoor": "Jellyshroom Trapdoor",
+	
 	"block.betterendforge.violecite": "Violecite",
 	"block.betterendforge.violecite_bricks": "Violecite Bricks",
 	"block.betterendforge.violecite_bricks_slab": "Violecite Brick Slab",
@@ -565,6 +612,7 @@
 	"block.betterendforge.violecite_pedestal": "Violecite Pedestal",
 	"block.betterendforge.violecite_lantern": "Violecite Lantern",
 	"block.betterendforge.violecite_furnace": "Violecite Furnace",
+	
 	"block.betterendforge.flavolite": "Flavolite",
 	"block.betterendforge.flavolite_bricks": "Flavolite Bricks",
 	"block.betterendforge.flavolite_bricks_slab": "Flavolite Brick Slab",
@@ -581,6 +629,7 @@
 	"block.betterendforge.flavolite_pedestal": "Flavolite Pedestal",
 	"block.betterendforge.flavolite_lantern": "Flavolite Lantern",
 	"block.betterendforge.flavolite_furnace": "Flavolite Furnace",
+	
 	"block.betterendforge.sulphuric_rock": "Sulfuric Rock",
 	"block.betterendforge.sulphuric_rock_bricks": "Sulfuric Rock Bricks",
 	"block.betterendforge.sulphuric_rock_bricks_slab": "Sulfuric Rock Bricks Slab",
@@ -597,6 +646,7 @@
 	"block.betterendforge.sulphuric_rock_tiles": "Sulfuric Rock Tiles",
 	"block.betterendforge.sulphuric_rock_wall": "Sulfuric Rock Wall",
 	"block.betterendforge.sulphuric_rock_furnace": "Sulfuric Rock Furnace",
+	
 	"block.betterendforge.thallasium_ore": "Thallasium Ore",
 	"block.betterendforge.thallasium_block": "Thallasium Block",
 	"item.betterendforge.thallasium_ingot": "Thallasium Ingot",
@@ -626,7 +676,7 @@
 	"item.betterendforge.thallasium_helmet": "Thallasium Helmet",
 	"item.betterendforge.thallasium_chestplate": "Thallasium Chestplate",
 	"item.betterendforge.thallasium_leggings": "Thallasium Leggings",
-	"item.betterendforge.thallasium_boots": "Thallasium Boots",
+	"item.betterendforge.thallasium_boots": "Thallasium Boots",	
 	"block.betterendforge.thallasium_bulb_lantern": "Thallasium Bulb Lantern",
 	"block.betterendforge.thallasium_bulb_lantern_black": "Black Thallasium Bulb Lantern",
 	"block.betterendforge.thallasium_bulb_lantern_blue": "Blue Thallasium Bulb Lantern",
@@ -644,6 +694,7 @@
 	"block.betterendforge.thallasium_bulb_lantern_red": "Red Thallasium Bulb Lantern",
 	"block.betterendforge.thallasium_bulb_lantern_white": "White Thallasium Bulb Lantern",
 	"block.betterendforge.thallasium_bulb_lantern_yellow": "Yellow Thallasium Bulb Lantern",
+	
 	"block.betterendforge.terminite_block": "Terminite Block",
 	"item.betterendforge.terminite_ingot": "Terminite Ingot",
 	"item.betterendforge.terminite_nugget": "Terminite Nugget",
@@ -690,6 +741,7 @@
 	"block.betterendforge.terminite_bulb_lantern_red": "Red Terminite Bulb Lantern",
 	"block.betterendforge.terminite_bulb_lantern_white": "White Terminite Bulb Lantern",
 	"block.betterendforge.terminite_bulb_lantern_yellow": "Yellow Terminite Bulb Lantern",
+
 	"block.betterendforge.virid_jadestone": "Virid Jadestone",
 	"block.betterendforge.virid_jadestone_bricks": "Virid Jadestone Bricks",
 	"block.betterendforge.virid_jadestone_bricks_slab": "Virid Jadestone Brick Slab",
@@ -706,6 +758,7 @@
 	"block.betterendforge.virid_jadestone_pedestal": "Virid Jadestone Pedestal",
 	"block.betterendforge.virid_jadestone_lantern": "Virid Jadestone Lantern",
 	"block.betterendforge.virid_jadestone_furnace": "Virid Jadestone Furnace",
+
 	"block.betterendforge.azure_jadestone": "Azure Jadestone",
 	"block.betterendforge.azure_jadestone_bricks": "Azure Jadestone Bricks",
 	"block.betterendforge.azure_jadestone_bricks_slab": "Azure Jadestone Brick Slab",
@@ -722,6 +775,8 @@
 	"block.betterendforge.azure_jadestone_stairs": "Azure Jadestone Stairs",
 	"block.betterendforge.azure_jadestone_tiles": "Azure Jadestone Tiles",
 	"block.betterendforge.azure_jadestone_wall": "Azure Jadestone Wall",
+
+
 	"block.betterendforge.sandy_jadestone": "Sandy Jadestone",
 	"block.betterendforge.sandy_jadestone_bricks": "Sandy Jadestone Bricks",
 	"block.betterendforge.sandy_jadestone_bricks_slab": "Sandy Jadestone Brick Slab",
@@ -738,6 +793,8 @@
 	"block.betterendforge.sandy_jadestone_stairs": "Sandy Jadestone Stairs",
 	"block.betterendforge.sandy_jadestone_tiles": "Sandy Jadestone Tiles",
 	"block.betterendforge.sandy_jadestone_wall": "Sandy Jadestone Wall",
+
+
 	"block.betterendforge.umbralith": "Umbralith",
 	"block.betterendforge.umbralith_bricks": "Umbralith Bricks",
 	"block.betterendforge.umbralith_bricks_slab": "Umbralith Bricks Slab",
@@ -756,12 +813,15 @@
 	"block.betterendforge.umbralith_tiles": "Umbralith Tiles",
 	"block.betterendforge.umbralith_wall": "Umbralith Wall",
 	"block.betterendforge.flammalix": "Flammalix",
+
 	"biome.betterendforge.umbra_valley": "Umbra Valley",
 	"block.betterendforge.inflexia": "Inflexia",
 	"block.betterendforge.pallidium_full": "Full Pallidium Cover",
 	"block.betterendforge.pallidium_heavy": "Heavy Pallidium Cover",
 	"block.betterendforge.pallidium_thin": "Thin Pallidium Cover",
 	"block.betterendforge.pallidium_tiny": "Tiny Pallidium Cover",
-	"block.betterendforge.flammalix": "Flammalix",
-	"block.betterendforge.charcoal_block": "Charcoal Block"
+
+	"block.betterendforge.charcoal_block": "Charcoal Block",
+	"biome.betterendforge.end_cave": "End Cave",
+	"biome.betterendforge.jade_cave": "Jade Cave"
 }
