@@ -2,11 +2,11 @@ package mod.beethoven92.betterendforge.mixin.common;
 
 import mod.beethoven92.betterendforge.common.init.ModBlocks;
 import mod.beethoven92.betterendforge.common.init.ModTags;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.ChorusPlantBlock;
+import mod.beethoven92.betterendforge.common.util.BlockHelper;
+import mod.beethoven92.betterendforge.common.world.generator.GeneratorOptions;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItemUseContext;
+import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
@@ -17,6 +17,7 @@ import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(value = ChorusPlantBlock.class, priority = 100)
@@ -25,24 +26,49 @@ public abstract class ChorusPlantBlockMixin extends Block {
 		super(settings);
 	}
 
-	@Inject(method = "getStateForPlacement", at = @At("RETURN"), cancellable = true)
+	@Inject(method = {"<init>"}, at = {@At("TAIL")})
+	private void onInit(AbstractBlock.Properties builder, CallbackInfo ci) {
+		if (GeneratorOptions.changeChorusPlant()) setDefaultState(getDefaultState().with(BlockHelper.ROOTS, Boolean.FALSE));
+	}
+
+	@Inject(method = {"fillStateContainer"}, at = {@At("TAIL")})
+	private void onFill(StateContainer.Builder<Block, BlockState> builder, CallbackInfo ci) {
+		GeneratorOptions.init();
+		if (GeneratorOptions.changeChorusPlant())
+			builder.add(BlockHelper.ROOTS);
+	}
+
+	@Inject(method = {"getStateForPlacement"}, at = {@At("RETURN")}, cancellable = true)
 	private void be_getStateForPlacement(BlockItemUseContext ctx, CallbackInfoReturnable<BlockState> info) {
 		BlockPos pos = ctx.getPos();
 		World world = ctx.getWorld();
 		BlockState plant = info.getReturnValue();
 		if (ctx.canPlace() && plant.isIn(Blocks.CHORUS_PLANT) && world.getBlockState(pos.down()).isIn(ModTags.END_GROUND)) {
-			info.setReturnValue(plant.with(BlockStateProperties.DOWN, true));
+			if (GeneratorOptions.changeChorusPlant()) {
+				info.setReturnValue(plant.with(BlockHelper.ROOTS, Boolean.TRUE).with(BlockStateProperties.DOWN, Boolean.TRUE));
+			} else {
+				info.setReturnValue(plant.with(BlockStateProperties.DOWN, Boolean.TRUE));
+			}
+			info.cancel();
 		}
 	}
 
-	@Inject(method = "makeConnections", at = @At("RETURN"), cancellable = true)
-	private void beConnectionProperties(IBlockReader blockGetter, BlockPos blockPos, CallbackInfoReturnable<BlockState> info)
-	{
+	@Inject(method = {"makeConnections"}, at = {@At("RETURN")}, cancellable = true)
+	private void beConnectionProperties(IBlockReader blockGetter, BlockPos blockPos, CallbackInfoReturnable<BlockState> info) {
 		BlockState plant = info.getReturnValue();
-		if (plant.isIn(Blocks.CHORUS_PLANT) && blockGetter.getBlockState(blockPos.down()).isIn(ModTags.END_GROUND)) {
-			info.setReturnValue(plant.with(BlockStateProperties.DOWN, true));
-		}
-
+		if (plant.isIn(Blocks.CHORUS_PLANT))
+			if (blockGetter.getBlockState(blockPos.down()).isIn(ModTags.END_GROUND)) {
+				if (GeneratorOptions.changeChorusPlant()) {
+					info.setReturnValue(plant.with(BlockStateProperties.DOWN, Boolean.TRUE).with(BlockHelper.ROOTS, Boolean.TRUE));
+				} else {
+					info.setReturnValue(plant.with(BlockStateProperties.DOWN, Boolean.TRUE));
+				}
+				info.cancel();
+			} else {
+				if (GeneratorOptions.changeChorusPlant())
+					info.setReturnValue(plant.with(BlockHelper.ROOTS, Boolean.TRUE));
+				info.cancel();
+			}
 	}
 
 	@Inject(method = "isValidPosition", at = @At("HEAD"), cancellable = true)
@@ -54,15 +80,24 @@ public abstract class ChorusPlantBlockMixin extends Block {
 		}
 	}
 
-	@Inject(method = "updatePostPlacement", at = @At("RETURN"), cancellable = true)
-	private void updatePostPlacement(BlockState state, Direction direction, BlockState newState, IWorld world,
-			BlockPos pos, BlockPos posFrom, CallbackInfoReturnable<BlockState> info)
-	{
+	@Inject(method = {"updatePostPlacement"}, at = {@At("RETURN")}, cancellable = true)
+	private void updatePostPlacement(BlockState state, Direction direction, BlockState newState, IWorld world, BlockPos pos, BlockPos posFrom, CallbackInfoReturnable<BlockState> info) {
 		BlockState plant = info.getReturnValue();
-		if (plant.isIn(Blocks.CHORUS_PLANT) && world.getBlockState(pos.down()).isIn(ModTags.END_GROUND)) {
-			plant = plant.with(BlockStateProperties.DOWN, true);
+		if (plant.isIn(Blocks.CHORUS_PLANT)) {
+			if (world.getBlockState(pos.down()).isIn(ModTags.END_GROUND)) {
+				if (GeneratorOptions.changeChorusPlant()) {
+					plant = plant.with(BlockStateProperties.DOWN, Boolean.TRUE).with(BlockHelper.ROOTS, Boolean.TRUE);
+				} else {
+					plant = plant.with(BlockStateProperties.DOWN, Boolean.TRUE);
+				}
+				info.cancel();
+			} else {
+				if (GeneratorOptions.changeChorusPlant())
+					plant = plant.with(BlockHelper.ROOTS, Boolean.TRUE);
+				info.cancel();
+			}
 			info.setReturnValue(plant);
-
+			info.cancel();
 		}
 	}
 }
