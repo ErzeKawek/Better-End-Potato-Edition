@@ -40,7 +40,7 @@ public class BlockSignEditScreen extends Screen {
 	private int ticksSinceOpened;
 	private int currentRow;
 	private TextInputUtil selectionManager;
-	private final String[] text = (String[]) Util.make(new String[4], (strings) -> Arrays.fill(strings, ""));
+	private final String[] text = Util.make(new String[4], (strings) -> Arrays.fill(strings, ""));
 
 	public BlockSignEditScreen(ESignTileEntity sign) {
 		super(new TranslationTextComponent("sign.edit"));
@@ -82,7 +82,7 @@ public class BlockSignEditScreen extends Screen {
 
 	private void finishEditing() {
 		this.sign.markDirty();
-		this.minecraft.displayGuiScreen((Screen) null);
+		this.minecraft.displayGuiScreen(null);
 	}
 
 	@Override
@@ -103,8 +103,7 @@ public class BlockSignEditScreen extends Screen {
 			this.selectionManager.moveCursorToEnd();
 			return true;
 		} else if (keyCode != 264 && keyCode != 257 && keyCode != 335) {
-			return this.selectionManager.specialKeyPressed(keyCode) ? true
-					: super.keyPressed(keyCode, scanCode, modifiers);
+			return this.selectionManager.specialKeyPressed(keyCode) || super.keyPressed(keyCode, scanCode, modifiers);
 		} else {
 			this.currentRow = this.currentRow + 1 & 3;
 			this.selectionManager.moveCursorToEnd();
@@ -118,7 +117,7 @@ public class BlockSignEditScreen extends Screen {
 		this.renderBackground(matrices);
 		AbstractGui.drawCenteredString(matrices, this.font, this.title, this.width / 2, 40, 16777215);
 		matrices.push();
-		matrices.translate((double) (this.width / 2), 0.0D, 50.0D);
+		matrices.translate(this.width / 2, 0.0D, 50.0D);
 
 		matrices.scale(93.75F, -93.75F, 93.75F);
 		matrices.translate(0.0D, -1.3125D, 0.0D);

@@ -9,13 +9,11 @@ import com.google.common.collect.Maps;
 
 import mod.beethoven92.betterendforge.common.util.ModMathHelper;
 import mod.beethoven92.betterendforge.common.util.sdf.SDF;
-import mod.beethoven92.betterendforge.common.util.sdf.operator.SDFFlatWave;
 import mod.beethoven92.betterendforge.common.util.sdf.operator.SDFScale;
 import mod.beethoven92.betterendforge.common.util.sdf.operator.SDFSmoothUnion;
 import mod.beethoven92.betterendforge.common.util.sdf.operator.SDFTranslate;
 import mod.beethoven92.betterendforge.common.util.sdf.primitive.SDFCappedCone;
 import mod.beethoven92.betterendforge.common.util.sdf.primitive.SDFRadialNoiseMap;
-import mod.beethoven92.betterendforge.config.CommonConfig;
 import net.minecraft.util.math.BlockPos;
 
 public class IslandLayer

@@ -13,7 +13,6 @@ import it.unimi.dsi.fastutil.objects.Object2IntMap.Entry;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
 import it.unimi.dsi.fastutil.objects.ObjectIterator;
 import mod.beethoven92.betterendforge.common.block.EndStoneSmelter;
-import mod.beethoven92.betterendforge.common.init.ModBlocks;
 import mod.beethoven92.betterendforge.common.init.ModTileEntityTypes;
 import mod.beethoven92.betterendforge.common.inventory.EndStoneSmelterContainer;
 import mod.beethoven92.betterendforge.common.recipes.AlloyingRecipe;
@@ -447,10 +446,7 @@ public class EndStoneSmelterTileEntity extends LockableTileEntity implements ITi
 	{
 		if (direction == Direction.DOWN && index == 2) 
 		{
-			if (stack.getItem() != Items.BUCKET && stack.getItem() != Items.WATER_BUCKET) 
-			{
-				return false;
-			}
+            return stack.getItem() == Items.BUCKET || stack.getItem() == Items.WATER_BUCKET;
 		}
 		return true;
 	}

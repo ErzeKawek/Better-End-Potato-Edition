@@ -17,13 +17,11 @@ import net.minecraft.block.BlockState;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockPos.Mutable;
-import net.minecraft.world.IWorld;
 import net.minecraft.world.IWorld;
 
 public abstract class SDF 
 {
-	private List<Function<PosInfo, BlockState>> postProcesses = Lists.newArrayList();
+	private final List<Function<PosInfo, BlockState>> postProcesses = Lists.newArrayList();
 	
 	private Function<BlockState, Boolean> canReplace = (state) -> state.getMaterial().isReplaceable();
 

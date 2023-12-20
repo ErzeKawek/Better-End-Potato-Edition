@@ -358,7 +358,7 @@ public class ModBlockStates extends BlockStateProvider
                boolean powered = state.get(WoodButtonBlock.POWERED);
 
                return ConfiguredModel.builder()
-               .modelFile(powered == true ? buttonPressed : button)
+               .modelFile(powered ? buttonPressed : button)
                .rotationX(state.get(BlockStateProperties.FACE).ordinal() * 90)
                .rotationY((((int) state.get(BlockStateProperties.HORIZONTAL_FACING).getHorizontalAngle() + angleOffset) + (state.get(BlockStateProperties.FACE) == AttachFace.CEILING ? 180 : 0)) % 360)
                .build();
@@ -374,7 +374,7 @@ public class ModBlockStates extends BlockStateProvider
            boolean powered = state.get(PressurePlateBlock.POWERED);
 
            return ConfiguredModel.builder()
-           .modelFile(powered == true ? plateDown : plate)
+           .modelFile(powered ? plateDown : plate)
            .build();
         });
     }
@@ -618,18 +618,16 @@ public class ModBlockStates extends BlockStateProvider
            switch (dir) 
            {
            case DOWN:
-        	   break;
+               case UP:
+               case SOUTH:
+                   break;
            case EAST:
         	   y = 270;
         	   break;
            case NORTH:
         	   y = 180;
         	   break;
-           case SOUTH:
-        	   break;
-           case UP:
-        	   break;
-           case WEST:
+               case WEST:
         	   y = 90;
         	   break;
            }
@@ -665,9 +663,7 @@ public class ModBlockStates extends BlockStateProvider
            case NORTH:
         	   y = 180;
         	   break;
-           case SOUTH:
-        	   break;
-           case WEST:
+               case WEST:
         	   y = 90;
         	   break;
 		   default:
@@ -708,9 +704,7 @@ public class ModBlockStates extends BlockStateProvider
            case EAST:
         	   y = 90;
         	   break;
-           case NORTH:
-        	   break;
-           case SOUTH:
+               case SOUTH:
         	   y = 180;
         	   break;
            case WEST:

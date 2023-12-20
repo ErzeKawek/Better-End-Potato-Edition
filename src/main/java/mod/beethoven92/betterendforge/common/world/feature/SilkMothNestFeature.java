@@ -2,8 +2,6 @@ package mod.beethoven92.betterendforge.common.world.feature;
 
 import java.util.Random;
 
-import com.mojang.serialization.Codec;
-
 import mod.beethoven92.betterendforge.common.block.BlockProperties;
 import mod.beethoven92.betterendforge.common.init.ModBlocks;
 import mod.beethoven92.betterendforge.common.util.BlockHelper;
@@ -32,11 +30,8 @@ public class SilkMothNestFeature extends Feature<NoFeatureConfig> {
 			state = world.getBlockState(pos);
 			if ((state.isAir() || state.isIn(ModBlocks.TENANEA_OUTER_LEAVES.get())) && world.isAirBlock(pos.down())) {
 				for (Direction dir: BlockHelper.HORIZONTAL_DIRECTIONS) {
-					if (world.getBlockState(pos.down().offset(dir)).getMaterial().blocksMovement()) {
-						return false;
-					}
-					return true;
-				}
+                    return !world.getBlockState(pos.down().offset(dir)).getMaterial().blocksMovement();
+                }
 			}
 		}
 		return false;

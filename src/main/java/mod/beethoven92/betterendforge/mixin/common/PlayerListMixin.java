@@ -22,7 +22,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
-import java.util.UUID;
 
 @Mixin(PlayerList.class)
 public class PlayerListMixin 
@@ -45,9 +44,9 @@ public class PlayerListMixin
 	
 	@Final
 	@Shadow
-	private DynamicRegistries.Impl field_232639_s_;;
+	private DynamicRegistries.Impl field_232639_s_;
 
-	@Shadow
+    @Shadow
 	private int viewDistance;
 	
 	@Shadow

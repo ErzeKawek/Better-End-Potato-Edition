@@ -6,8 +6,7 @@ import mod.beethoven92.betterendforge.config.jsons.JsonIdConfig;
 import mod.beethoven92.betterendforge.config.jsons.JsonPathConfig;
 //import net.fabricmc.api.EnvType;
 //import net.fabricmc.api.Environment;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
+
 //import ru.bclib.BCLib;
 //import ru.bclib.config.EntryConfig;
 //import ru.bclib.config.IdConfig;

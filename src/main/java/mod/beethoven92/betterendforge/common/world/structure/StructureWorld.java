@@ -17,7 +17,7 @@ import net.minecraft.world.chunk.IChunk;
 
 public class StructureWorld 
 {
-	private Map<ChunkPos, Part> parts = Maps.newHashMap();
+	private final Map<ChunkPos, Part> parts = Maps.newHashMap();
 	private ChunkPos lastPos;
 	private Part lastPart;
 	private int minX = Integer.MAX_VALUE;

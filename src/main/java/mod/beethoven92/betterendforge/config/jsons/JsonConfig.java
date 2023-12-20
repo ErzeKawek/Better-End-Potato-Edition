@@ -10,9 +10,6 @@ import mod.beethoven92.betterendforge.config.jsons.JsonConfigKeeper.IntegerEntry
 import mod.beethoven92.betterendforge.config.jsons.JsonConfigKeeper.RangeEntry;
 import mod.beethoven92.betterendforge.config.jsons.JsonConfigKeeper.StringEntry;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public abstract class JsonConfig 
 {
 	public static final String CONFIG_SYNC_PREFIX = "CONFIG_";

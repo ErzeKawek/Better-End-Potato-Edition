@@ -1,7 +1,5 @@
 package mod.beethoven92.betterendforge.config;
 
-import net.minecraftforge.common.ForgeConfigSpec;
-
 public class ClientConfig
 {
     /*

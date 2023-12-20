@@ -41,7 +41,7 @@ public class ModSpawnEggItem extends SpawnEggItem {
 		}
 	};
 
-	private Supplier<EntityType<?>> type;
+	private final Supplier<EntityType<?>> type;
 
 	public ModSpawnEggItem(Supplier<EntityType<?>> typeIn, int primaryColorIn, int secondaryColorIn,
 			Properties builder) {

@@ -80,7 +80,7 @@ public class EndPortalBlock extends NetherPortalBlock
 		if (worldIn instanceof ServerWorld && !entityIn.isPassenger() && !entityIn.isBeingRidden() 
 				&& entityIn.isNonBoss()) 
 		{
-			TeleportingEntity teleEntity = TeleportingEntity.class.cast(entityIn);
+			TeleportingEntity teleEntity = (TeleportingEntity) entityIn;
 			
 			//if (teleEntity.hasCooldown()) return;
 			// Checks if entity has nether portal cooldown
@@ -176,17 +176,12 @@ public class EndPortalBlock extends NetherPortalBlock
 									entityDir = frontDir;
 								}
 
-								if (frontDir == entityDir || frontDir.getOpposite() == entityDir) 
-								{
-									return checkPos.offset(entityDir);
-								}
-								else 
-								{
-									entity.getRotatedYaw(Rotation.CLOCKWISE_90);
-									entityDir = entityDir.rotateY();
-									return checkPos.offset(entityDir);
-								}
-							}
+                                if (frontDir != entityDir && frontDir.getOpposite() != entityDir) {
+                                    entity.getRotatedYaw(Rotation.CLOCKWISE_90);
+                                    entityDir = entityDir.rotateY();
+                                }
+                                return checkPos.offset(entityDir);
+                            }
 							checkPos.move(Direction.DOWN);
 						}
 					}

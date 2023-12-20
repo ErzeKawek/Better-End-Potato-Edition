@@ -1,14 +1,9 @@
 package mod.beethoven92.betterendforge.common.recipes;
 
-import java.util.Arrays;
-import java.util.Map;
-import java.util.function.Consumer;
-
 import com.google.common.collect.Maps;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.mojang.serialization.JsonOps;
-
 import mod.beethoven92.betterendforge.common.init.ModRecipeSerializers;
 import mod.beethoven92.betterendforge.common.rituals.InfusionRitual;
 import net.minecraft.data.IFinishedRecipe;
@@ -21,6 +16,10 @@ import net.minecraft.util.IItemProvider;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
+
+import java.util.Arrays;
+import java.util.Map;
+import java.util.function.Consumer;
 
 public class InfusionRecipe implements IRecipe<InfusionRitual> {
 	public final static String GROUP = "infusion";
@@ -52,9 +51,7 @@ public class InfusionRecipe implements IRecipe<InfusionRitual> {
 	public NonNullList<Ingredient> getIngredients() {
 		NonNullList<Ingredient> list = NonNullList.create();
 		list.add(input);
-		for (Ingredient catalyst : catalysts) {
-			list.add(catalyst);
-		}
+        list.addAll(Arrays.asList(catalysts));
 		return list;
 	}
 
@@ -108,7 +105,7 @@ public class InfusionRecipe implements IRecipe<InfusionRitual> {
 		private Ingredient input;
 		private ItemStack output;
 		private int time = 1;
-		private Ingredient[] catalysts = new Ingredient[8];
+		private final Ingredient[] catalysts = new Ingredient[8];
 
 		private Builder() {
 			Arrays.fill(catalysts, Ingredient.EMPTY);
@@ -172,10 +169,10 @@ public class InfusionRecipe implements IRecipe<InfusionRitual> {
 		}
 
 		public static class Result implements IFinishedRecipe {
-			private ResourceLocation id;
-			private Ingredient input;
-			private ItemStack output;
-			private int time;
+			private final ResourceLocation id;
+			private final Ingredient input;
+			private final ItemStack output;
+			private final int time;
 			private Ingredient[] catalysts = new Ingredient[8];
 			
 			private Result(ResourceLocation id, Ingredient input, ItemStack output, int time, Ingredient[] catalysts) {

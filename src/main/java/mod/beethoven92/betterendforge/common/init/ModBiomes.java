@@ -13,7 +13,6 @@ import com.google.common.collect.Sets;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
-import mod.beethoven92.betterendforge.common.util.FeatureHelper;
 import mod.beethoven92.betterendforge.common.util.JsonFactory;
 import mod.beethoven92.betterendforge.common.world.biome.*;
 import mod.beethoven92.betterendforge.common.world.biome.cave.*;
@@ -22,7 +21,6 @@ import mod.beethoven92.betterendforge.common.world.generator.BiomePicker;
 import mod.beethoven92.betterendforge.common.world.generator.EndBiomeType;
 import mod.beethoven92.betterendforge.common.world.generator.GeneratorOptions;
 import mod.beethoven92.betterendforge.config.Configs;
-import mod.beethoven92.betterendforge.config.jsons.JsonConfigs;
 import net.minecraft.client.Minecraft;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.RegistryKey;

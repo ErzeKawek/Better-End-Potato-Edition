@@ -13,7 +13,6 @@ import mod.beethoven92.betterendforge.common.item.ModItemTier;
 import mod.beethoven92.betterendforge.common.item.ModSpawnEggItem;
 import mod.beethoven92.betterendforge.common.item.UmbrellaClusterJuiceItem;
 import mod.beethoven92.betterendforge.common.util.ModMathHelper;
-import net.minecraft.block.Block;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;

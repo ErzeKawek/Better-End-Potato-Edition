@@ -60,20 +60,8 @@ public class HammerItem extends ToolItem
 		
 		return true;
 	}
-	
-	@Override
-	public boolean onBlockDestroyed(ItemStack stack, World worldIn, BlockState state, BlockPos pos,
-			LivingEntity entityLiving) 
-	{
-		if (!worldIn.isRemote && state.getBlockHardness(worldIn, pos) != 0.0F) 
-		{
-			stack.damageItem(1, entityLiving, ((entity) -> entity.sendBreakAnimation(EquipmentSlotType.MAINHAND)));
-		}
 
-		return true;
-	}
-	
-	@Override
+    @Override
 	public float getDestroySpeed(ItemStack stack, BlockState state) 
 	{
 		if (state.getMaterial().equals(Material.GLASS)) 
@@ -92,7 +80,7 @@ public class HammerItem extends ToolItem
 			{
 				mult = this.getTier().getEfficiency() / 2.0F;
 			}
-			return mult > 1.0F ? mult : 1.0F;
+			return Math.max(mult, 1.0F);
 		}
 		return 1.0F;
 	}

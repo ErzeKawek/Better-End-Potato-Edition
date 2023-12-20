@@ -1,18 +1,10 @@
 package mod.beethoven92.betterendforge.common.world.feature;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Random;
-
 import mod.beethoven92.betterendforge.common.init.ModBiomes;
 import mod.beethoven92.betterendforge.common.init.ModTags;
 import mod.beethoven92.betterendforge.common.util.BlockHelper;
 import mod.beethoven92.betterendforge.common.util.FeatureHelper;
-import mod.beethoven92.betterendforge.common.util.NbtModIdReplacer;
 import net.minecraft.block.BlockState;
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.nbt.CompressedStreamTools;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.Direction;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.ResourceLocation;
@@ -28,6 +20,8 @@ import net.minecraft.world.gen.feature.NoFeatureConfig;
 import net.minecraft.world.gen.feature.template.PlacementSettings;
 import net.minecraft.world.gen.feature.template.Template;
 import net.minecraft.world.gen.surfacebuilders.ISurfaceBuilderConfig;
+
+import java.util.Random;
 
 public abstract class NBTFeature extends Feature<NoFeatureConfig>
 {
@@ -198,52 +192,8 @@ public abstract class NBTFeature extends Feature<NoFeatureConfig>
 		int ez = sz + 47;
 		return MutableBoundingBox.createProper(sx, 0, sz, ex, 255, ez);
 	}
-	
-	public static Template readStructure(String path, String replacePath) 
-	{
-		try 
-		{
-			InputStream inputstream = MinecraftServer.class.getResourceAsStream(path);
-			return readStructureFromStream(inputstream, replacePath);
-		}
-		catch (IOException e) 
-		{
-			e.printStackTrace();
-		}
-		return null;
-	}
-	
-	protected static Template readStructure(ResourceLocation resource) 
-	{
-		String ns = resource.getNamespace();
-		String nm = resource.getPath();
 
-		try
-		{
-			InputStream inputstream = MinecraftServer.class.getResourceAsStream("/data/" + ns + "/structures/" + nm + ".nbt");
-			return readStructureFromStream(inputstream, null);
-		}
-		catch (IOException e) 
-		{
-			e.printStackTrace();
-		}
-
-		return null;
-	}
-	
-	private static Template readStructureFromStream(InputStream stream, String replacePath) throws IOException 
-	{
-		CompoundNBT nbttagcompound = CompressedStreamTools.readCompressed(stream);
-		
-		NbtModIdReplacer.readAndReplace(nbttagcompound, replacePath);
-		
-		Template template = new Template();
-		template.read(nbttagcompound);
-		
-		return template;
-	}
-	
-	public static enum TerrainMerge 
+	public enum TerrainMerge
 	{
 		NONE,
 		SURFACE,

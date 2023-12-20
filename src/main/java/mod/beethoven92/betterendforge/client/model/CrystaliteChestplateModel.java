@@ -16,7 +16,7 @@ public class CrystaliteChestplateModel extends BipedModel<LivingEntity> {
 
 	public ModelRenderer leftShoulder;
 	public ModelRenderer rightShoulder;
-	private boolean thinArms;
+	private final boolean thinArms;
 	
 	public CrystaliteChestplateModel(float scale, boolean thinArms) {
 		super(RenderType::getEntityTranslucent, scale, 0.0F, 64, 48);

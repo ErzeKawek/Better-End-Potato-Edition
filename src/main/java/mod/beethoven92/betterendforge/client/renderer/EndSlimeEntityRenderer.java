@@ -19,8 +19,8 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
 
 public class EndSlimeEntityRenderer extends MobRenderer<EndSlimeEntity, EndSlimeEntityModel<EndSlimeEntity>> {
-	private static final ResourceLocation TEXTURE[] = new ResourceLocation[4];
-	private static final RenderType GLOW[] = new RenderType[4];
+	private static final ResourceLocation[] TEXTURE = new ResourceLocation[4];
+	private static final RenderType[] GLOW = new RenderType[4];
 
 	public EndSlimeEntityRenderer(EntityRendererManager entityRenderDispatcher) {
 		super(entityRenderDispatcher, new EndSlimeEntityModel<>(false), 0.25F);

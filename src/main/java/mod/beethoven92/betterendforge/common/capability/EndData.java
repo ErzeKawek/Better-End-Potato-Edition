@@ -10,7 +10,6 @@ import com.google.common.collect.ImmutableList;
 import mod.beethoven92.betterendforge.BetterEnd;
 import mod.beethoven92.betterendforge.common.init.ModBiomes;
 import mod.beethoven92.betterendforge.common.world.generator.GeneratorOptions;
-import mod.beethoven92.betterendforge.config.CommonConfig;
 import net.minecraft.block.PortalInfo;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -44,7 +43,7 @@ public class EndData implements INBTSerializable<CompoundNBT> {
 	@CapabilityInject(EndData.class)
 	public static final Capability<EndData> CAPABILITY = null;
 
-	private Set<UUID> players;
+	private final Set<UUID> players;
 	private BlockPos spawn;
 
 	public EndData() {
@@ -158,7 +157,7 @@ public class EndData implements INBTSerializable<CompoundNBT> {
 	@EventBusSubscriber(modid = BetterEnd.MOD_ID, bus = EventBusSubscriber.Bus.FORGE)
 	public static class Provider implements ICapabilitySerializable<INBT> {
 
-		private LazyOptional<EndData> instance = LazyOptional.of(CAPABILITY::getDefaultInstance);
+		private final LazyOptional<EndData> instance = LazyOptional.of(CAPABILITY::getDefaultInstance);
 
 		@Override
 		public <T> LazyOptional<T> getCapability(Capability<T> cap, Direction side) {

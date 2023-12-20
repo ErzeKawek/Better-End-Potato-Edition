@@ -34,7 +34,7 @@ import net.minecraft.world.World;
 
 public class EndChestTileEntityRenderer extends TileEntityRenderer<EChestTileEntity> {
 	private static final HashMap<Block, RenderType[]> LAYERS = Maps.newHashMap();
-	private static RenderType[] defaultLayer;
+	private static final RenderType[] defaultLayer;
 
 	private static final int ID_NORMAL = 0;
 	private static final int ID_LEFT = 1;
@@ -85,15 +85,15 @@ public class EndChestTileEntityRenderer extends TileEntityRenderer<EChestTileEnt
 	public void render(EChestTileEntity entity, float tickDelta, MatrixStack matrices, IRenderTypeBuffer vertexConsumers, int light, int overlay) {
 		World world = entity.getWorld();
 		boolean worldExists = world != null;
-		BlockState blockState = worldExists ? entity.getBlockState() : (BlockState) Blocks.CHEST.getDefaultState().with(ChestBlock.FACING, Direction.SOUTH);
-		ChestType chestType = blockState.hasProperty(ChestBlock.TYPE) ? (ChestType) blockState.get(ChestBlock.TYPE) : ChestType.SINGLE;
+		BlockState blockState = worldExists ? entity.getBlockState() : Blocks.CHEST.getDefaultState().with(ChestBlock.FACING, Direction.SOUTH);
+		ChestType chestType = blockState.hasProperty(ChestBlock.TYPE) ? blockState.get(ChestBlock.TYPE) : ChestType.SINGLE;
 		Block block = blockState.getBlock();
 		if (entity.hasChest())
 			block = entity.getChest();
 		if (block instanceof AbstractChestBlock) {
 			AbstractChestBlock<?> abstractChestBlock = (AbstractChestBlock<?>) block;
 			boolean isDouble = chestType != ChestType.SINGLE;
-			float f = ((Direction) blockState.get(ChestBlock.FACING)).getHorizontalAngle();
+			float f = blockState.get(ChestBlock.FACING).getHorizontalAngle();
 			TileEntityMerger.ICallbackWrapper<? extends ChestTileEntity> propertySource;
 
 			matrices.push();
@@ -107,7 +107,7 @@ public class EndChestTileEntityRenderer extends TileEntityRenderer<EChestTileEnt
 				propertySource = TileEntityMerger.ICallback::func_225537_b_;
 			}
 
-			float pitch = ((Float2FloatFunction) propertySource.apply(ChestBlock.getLidRotationCallback((IChestLid) entity))).get(tickDelta);
+			float pitch = propertySource.apply(ChestBlock.getLidRotationCallback(entity)).get(tickDelta);
 			pitch = 1.0F - pitch;
 			pitch = 1.0F - pitch * pitch * pitch;
 			@SuppressWarnings({ "unchecked", "rawtypes" })

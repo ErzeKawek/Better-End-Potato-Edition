@@ -4,7 +4,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class JsonConfigKey 
 {
-	private final String path[];
+	private final String[] path;
 	private final String entry;
 	private final boolean root;
 	
@@ -69,12 +69,8 @@ public class JsonConfigKey
 				return false;
 			}
 		}
-		if (!entry.equals(other.entry))
-		{
-			return false;
-		}
-		return true;
-	}
+        return entry.equals(other.entry);
+    }
 	
 	@Override
 	public String toString() 
@@ -83,10 +79,10 @@ public class JsonConfigKey
 		{
 			return String.format("[root]:%s", entry);
 		}
-		String p = path[0];
+		StringBuilder p = new StringBuilder(path[0]);
 		for (int i = 1; i < path.length; i++) 
 		{
-			p += "." + path[i];
+			p.append(".").append(path[i]);
 		}
 		return String.format("%s:%s", p, entry);
 	}

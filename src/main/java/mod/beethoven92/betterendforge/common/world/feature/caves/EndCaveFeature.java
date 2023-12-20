@@ -15,7 +15,6 @@ import mod.beethoven92.betterendforge.common.util.ModMathHelper;
 import mod.beethoven92.betterendforge.common.world.biome.BetterEndBiome;
 import mod.beethoven92.betterendforge.common.world.biome.BetterEndCaveBiome;
 import mod.beethoven92.betterendforge.common.world.generator.GeneratorOptions;
-import mod.beethoven92.betterendforge.config.CommonConfig;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.Direction;

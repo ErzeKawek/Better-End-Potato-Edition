@@ -1,7 +1,6 @@
 package mod.beethoven92.betterendforge.common.world.feature;
 
 import com.google.common.collect.Lists;
-import mod.beethoven92.betterendforge.common.init.ModBlocks;
 import mod.beethoven92.betterendforge.common.init.ModTags;
 import mod.beethoven92.betterendforge.common.util.FeatureHelper;
 import mod.beethoven92.betterendforge.common.util.ModMathHelper;
@@ -26,8 +25,8 @@ import java.util.Random;
 import java.util.function.Function;
 
 public class ArchFeature extends Feature<NoFeatureConfig> {
-	private Function<BlockPos, BlockState> surfaceFunction;
-	private Block block;
+	private final Function<BlockPos, BlockState> surfaceFunction;
+	private final Block block;
 	
 	public ArchFeature(Block block, Function<BlockPos, BlockState> surfaceFunction) {
         super(NoFeatureConfig.field_236558_a_);
