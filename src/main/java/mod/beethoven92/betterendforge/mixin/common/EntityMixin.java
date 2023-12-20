@@ -74,7 +74,6 @@ public abstract class EntityMixin implements TeleportingEntity
 				this.world.getProfiler().endSection();
 				beResetExitPos();
 				info.setReturnValue(entity);
-				//info.cancel();
 			}
 		}
 	}

@@ -46,7 +46,6 @@ public abstract class ChorusFlowerBlockMixin extends Block
 		if (world.getBlockState(pos.down()).isIn(ModBlocks.CHORUS_NYLIUM.get())) 
 		{
 			info.setReturnValue(true);
-			info.cancel();
 		}
 	}
 	

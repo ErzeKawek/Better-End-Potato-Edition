@@ -22,7 +22,6 @@ public abstract class EndermanEntityMixin
 						player.getItemStackFromSlot(EquipmentSlotType.HEAD)) > 0) 
 		{
 			info.setReturnValue(false);
-			info.cancel();
 		}
 	}
 }

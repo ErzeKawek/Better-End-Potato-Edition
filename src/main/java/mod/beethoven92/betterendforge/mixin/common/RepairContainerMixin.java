@@ -121,12 +121,12 @@ public abstract class RepairContainerMixin extends AbstractRepairContainer imple
 	{
 		be_recipes = this.recipeManager.getRecipes(AnvilSmithingRecipe.TYPE, this.field_234643_d_, world);
 
-		if (be_recipes.size() > 0) 
+		if (!be_recipes.isEmpty())
 		{
 			int anvilLevel = this.anvilLevel.get();
 			be_recipes = be_recipes.stream().filter(recipe ->
 					anvilLevel >= recipe.anvilLevel).collect(Collectors.toList());
-			if (be_recipes.size() > 0) 
+			if (!be_recipes.isEmpty())
 			{
 				if (be_currentRecipe == null || !be_recipes.contains(be_currentRecipe)) 
 				{

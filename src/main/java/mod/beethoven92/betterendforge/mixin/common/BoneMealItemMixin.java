@@ -48,7 +48,6 @@ public abstract class BoneMealItemMixin
 	          }
 
 	          info.setReturnValue(ActionResultType.func_233537_a_(world.isRemote));
-	          info.cancel();
 		}
 		else if (!world.isRemote()) 
 		{
@@ -70,7 +69,6 @@ public abstract class BoneMealItemMixin
 					if (!world.getFluidState(offseted).isEmpty() && endBiome) 
 					{
 						info.setReturnValue(ActionResultType.FAIL);
-						info.cancel();
 					}
 				}
 				else 
@@ -90,14 +88,12 @@ public abstract class BoneMealItemMixin
 					if (!context.getPlayer().isCreative()) context.getItem().shrink(1);
 					world.playEvent(2005, blockPos, 0);
 					info.setReturnValue(ActionResultType.SUCCESS);
-					info.cancel();
 				}
 			}
 			// Prevents bonemeal generating sea grass underwater in end biomes
 			else if (!world.getFluidState(offseted).isEmpty() && endBiome) 
 			{
 				info.setReturnValue(ActionResultType.FAIL);
-				info.cancel();
 			}
 		}
 	}

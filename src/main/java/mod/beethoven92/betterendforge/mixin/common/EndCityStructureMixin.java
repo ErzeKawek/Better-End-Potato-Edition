@@ -28,17 +28,14 @@ public abstract class EndCityStructureMixin
 			if (chance == 0) 
 			{
 				info.setReturnValue(getYPosForStructure(i, j, chunkGenerator) >= 60);
-				info.cancel();
 			}
 			else if (chunkRandom.nextInt(chance) == 0)
 			{
 				info.setReturnValue(getYPosForStructure(i, j, chunkGenerator) >= 60);
-				info.cancel();
 			}
 			else 
 			{
 				info.setReturnValue(false);
-				info.cancel();
 			}
 		}
 	}

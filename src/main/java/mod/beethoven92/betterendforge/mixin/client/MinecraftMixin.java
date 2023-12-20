@@ -49,7 +49,6 @@ public class MinecraftMixin
 					BackgroundMusicSelector sound = this.world.getBiomeManager().getBiomeAtPosition(this.player.getPosition()).getBackgroundMusic().orElse(BackgroundMusicTracks.END_MUSIC);
 					info.setReturnValue(sound);
 				}
-				info.cancel();
 			}
 		}
 	}

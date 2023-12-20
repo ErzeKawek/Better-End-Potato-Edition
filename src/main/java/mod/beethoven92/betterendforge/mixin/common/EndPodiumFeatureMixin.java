@@ -38,7 +38,6 @@ public abstract class EndPodiumFeatureMixin
 		if (!GeneratorOptions.hasPortal())
 		{
 			info.setReturnValue(false);
-			info.cancel();
 		}
 
 		else if (GeneratorOptions.replacePortal() && FMLLoader.getLoadingModList().getModFileById("endergetic") == null) {

@@ -34,6 +34,7 @@ public class BiomeColorsMixin {
 	private static void be_getWaterColor(IBlockDisplayReader world, BlockPos blockPos, CallbackInfoReturnable<Integer> info) {
 		if (ClientOptions.useSulfurWaterColor()) {
 			IBlockDisplayReader view = HAS_MAGNESIUM ? Minecraft.getInstance().world : world;
+			if (view == null) return;
 			Mutable mut = new Mutable();
 			mut.setY(blockPos.getY());
 			for (int i = 0; i < OFFSETS.length; i++) {
@@ -41,7 +42,7 @@ public class BiomeColorsMixin {
 				mut.setZ(blockPos.getZ() + OFFSETS[i].y);
 				if ((view.getBlockState(mut).isIn(ModBlocks.BRIMSTONE.get()))) {
 					info.setReturnValue(i < 4 ? POISON_COLOR : STREAM_COLOR);
-					return;
+					break;
 				}
 			}
 		}

@@ -30,7 +30,6 @@ public abstract class DimensionTypeMixin
 		if (!GeneratorOptions.hasDragonFights())
 		{
 			info.setReturnValue(false);
-			info.cancel();
 		}
 	}
 }

@@ -65,5 +65,4 @@ public abstract class ChorusPlantBlockMixin extends Block {
 
 		}
 	}
-
 }

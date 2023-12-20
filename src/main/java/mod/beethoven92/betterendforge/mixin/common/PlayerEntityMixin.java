@@ -29,7 +29,6 @@ public abstract class PlayerEntityMixin {
 		BlockState blockState = world.getBlockState(pos);
 		if (blockState.isIn(ModBlocks.RESPAWN_OBELISK.get())) {
 			info.setReturnValue(beObeliskRespawnPosition(world, pos, blockState));
-			info.cancel();
 		}
 	}
 

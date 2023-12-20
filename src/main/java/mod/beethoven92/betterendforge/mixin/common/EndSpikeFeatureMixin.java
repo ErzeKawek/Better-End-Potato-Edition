@@ -51,7 +51,7 @@ public abstract class EndSpikeFeatureMixin
 		int x = spike.getCenterX();
 		int z = spike.getCenterZ();
 		int radius = spike.getRadius();
-		int minY = 0;
+		int minY;
 
         if ((long) x * (long) x + (long) z * (long) z < 10000) {
 			String pillarID = String.format("%d_%d", x, z);
