@@ -3,7 +3,6 @@ buildscript {
         maven { url = 'https://files.minecraftforge.net/maven' }
         maven { url='https://dist.creeper.host/Sponge/maven' }
         maven { url='https://repo.spongepowered.org/maven' }
-        jcenter()
         mavenCentral()
     }
     dependencies {
@@ -85,9 +84,16 @@ repositories {
     maven { 
         url 'https://maven.blamejared.com' 
     }
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
 }
 
 dependencies {
+    implementation fg.deobf("curse.maven:oh-the-biomes-youll-go-247560:4024011")
     minecraft 'net.minecraftforge:forge:1.16.5-36.2.39'
     compileOnly fg.deobf("mezz.jei:jei-1.16.4:7.6.0.62:api")
     runtimeOnly fg.deobf("mezz.jei:jei-1.16.4:7.6.0.62")
