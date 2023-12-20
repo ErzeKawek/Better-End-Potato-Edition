@@ -22,11 +22,7 @@ public class WorldDataAPI {
 
 
     public static CompoundNBT getRootTag(String modID) {
-        CompoundNBT root = TAGS.get(modID);
-        if (root == null) {
-            root = new CompoundNBT();
-            TAGS.put(modID, root);
-        }
+        CompoundNBT root = TAGS.computeIfAbsent(modID, k -> new CompoundNBT());
         return root;
     }
     public static CompoundNBT getCompoundTag(String modID, String path) {

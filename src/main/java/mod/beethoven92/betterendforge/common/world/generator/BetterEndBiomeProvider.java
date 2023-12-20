@@ -23,11 +23,10 @@ import net.minecraft.world.gen.SimplexNoiseGenerator;
 public class BetterEndBiomeProvider extends BiomeProvider
 {
 	public static final Codec<BetterEndBiomeProvider> BETTER_END_CODEC = RecordCodecBuilder.create(
-			(builder) -> {return builder.group(RegistryLookupCodec.getLookUpCodec(Registry.BIOME_KEY).forGetter(
-					(provider) -> {return provider.lookupRegistry;}), Codec.LONG.fieldOf("seed").stable().forGetter(
-							(provider) -> {return provider.seed;})).
-					apply(builder, builder.stable(BetterEndBiomeProvider::new));
-		   });
+			(builder) -> builder.group(RegistryLookupCodec.getLookUpCodec(Registry.BIOME_KEY).forGetter(
+					(provider) -> provider.lookupRegistry), Codec.LONG.fieldOf("seed").stable().forGetter(
+							(provider) -> provider.seed)).
+					apply(builder, builder.stable(BetterEndBiomeProvider::new)));
 	
 	private static final OpenSimplexNoise SMALL_NOISE = new OpenSimplexNoise(8324);
 	private final SimplexNoiseGenerator generator;

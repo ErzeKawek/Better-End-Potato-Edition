@@ -82,12 +82,11 @@ public class EndPortals
 	
 	public static boolean isAvailableItem(ResourceLocation item) 
 	{
-		for (int i = 0; i < portals.length; i++) 
-		{
-			if (portals[i].item.equals(item)) {
-				return true;
-			}
-		}
+        for (PortalInfo portal : portals) {
+            if (portal.item.equals(item)) {
+                return true;
+            }
+        }
 		return false;
 	}
 	
@@ -138,16 +137,12 @@ public class EndPortals
 			{
 				return world;
 			}
-			Iterator<ServerWorld> iterator = server.getWorlds().iterator();
-			while (iterator.hasNext()) 
-			{
-				ServerWorld world = iterator.next();
-				if (world.getDimensionKey().getLocation().equals(dimension)) 
-				{
-					this.world = world;
-					return world;
-				}
-			}
+            for (ServerWorld world : server.getWorlds()) {
+                if (world.getDimensionKey().getLocation().equals(dimension)) {
+                    this.world = world;
+                    return world;
+                }
+            }
 			return server.func_241755_D_(); // Get Overworld
 		}
 		

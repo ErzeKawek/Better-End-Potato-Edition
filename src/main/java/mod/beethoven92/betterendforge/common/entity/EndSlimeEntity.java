@@ -53,12 +53,10 @@ public class EndSlimeEntity extends SlimeEntity {
 		this.goalSelector.addGoal(2, new FaceTowardTargetGoal());
 		this.goalSelector.addGoal(3, new RandomLookGoal());
 		this.goalSelector.addGoal(5, new MoveGoal());
-		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<PlayerEntity>(this, PlayerEntity.class, 10, true,
-				false, (livingEntity) -> {
-					return Math.abs(livingEntity.getPosY() - this.getPosY()) <= 4.0D;
-				}));
+		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, 10, true,
+                false, (livingEntity) -> Math.abs(livingEntity.getPosY() - this.getPosY()) <= 4.0D));
 		this.targetSelector.addGoal(3,
-				new NearestAttackableTargetGoal<IronGolemEntity>(this, IronGolemEntity.class, true));
+                new NearestAttackableTargetGoal<>(this, IronGolemEntity.class, true));
 	}
 
 	public static AttributeModifierMap.MutableAttribute registerAttributes() {
@@ -204,9 +202,7 @@ public class EndSlimeEntity extends SlimeEntity {
 
 	private static boolean notManyEntities(IServerWorld world, BlockPos pos, int radius, int maxCount) {
 		AxisAlignedBB box = new AxisAlignedBB(pos).grow(radius);
-		List<EndSlimeEntity> list = world.getEntitiesWithinAABB(EndSlimeEntity.class, box, (entity) -> {
-			return true;
-		});
+		List<EndSlimeEntity> list = world.getEntitiesWithinAABB(EndSlimeEntity.class, box, (entity) -> true);
 		return list.size() <= maxCount;
 	}
 

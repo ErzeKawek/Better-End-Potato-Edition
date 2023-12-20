@@ -158,10 +158,10 @@ public class InfusionRecipe implements IRecipe<InfusionRitual> {
 			if (output == null)
 				Illegal("Output for Infusion recipe can't be null, recipe %s", id);
 			int empty = 0;
-			for (int i = 0; i < catalysts.length; i++) {
-				if (catalysts[i].hasNoMatchingItems())
-					empty++;
-			}
+            for (Ingredient catalyst : catalysts) {
+                if (catalyst.hasNoMatchingItems())
+                    empty++;
+            }
 			if (empty == catalysts.length) {
 				Illegal("At least one catalyst must be non empty, recipe %s", id);
 			}

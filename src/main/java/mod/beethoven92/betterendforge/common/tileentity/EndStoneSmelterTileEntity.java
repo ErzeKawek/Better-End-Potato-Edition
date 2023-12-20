@@ -69,7 +69,7 @@ public class EndStoneSmelterTileEntity extends LockableTileEntity implements ITi
 	{
 		super(ModTileEntityTypes.END_STONE_SMELTER.get());
 		
-		this.recipesUsed = new Object2IntOpenHashMap<ResourceLocation>();
+		this.recipesUsed = new Object2IntOpenHashMap<>();
 		this.items= NonNullList.withSize(4, ItemStack.EMPTY);
 		this.data = new IIntArray() 
 		{
@@ -126,9 +126,7 @@ public class EndStoneSmelterTileEntity extends LockableTileEntity implements ITi
 		compound.putShort("SmeltTimeTotal", (short) smeltTimeTotal);
 		ItemStackHelper.saveAllItems(compound, this.items);
 		CompoundNBT usedRecipes = new CompoundNBT();
-		this.recipesUsed.forEach((identifier, integer) -> {
-			usedRecipes.putInt(identifier.toString(), integer);
-		});
+		this.recipesUsed.forEach((identifier, integer) -> usedRecipes.putInt(identifier.toString(), integer));
 		compound.put("RecipesUsed", usedRecipes);
 		
 		return compound;
@@ -145,12 +143,9 @@ public class EndStoneSmelterTileEntity extends LockableTileEntity implements ITi
 		this.smeltTime = nbt.getShort("SmeltTime");
 		this.smeltTimeTotal = nbt.getShort("SmeltTimeTotal");
 		CompoundNBT compound = nbt.getCompound("RecipesUsed");
-		Iterator<String> recipes = compound.keySet().iterator();
-		while(recipes.hasNext()) 
-		{
-			String id = recipes.next();
-			this.recipesUsed.put(new ResourceLocation(id), compound.getInt(id));
-		}
+        for (String id : compound.keySet()) {
+            this.recipesUsed.put(new ResourceLocation(id), compound.getInt(id));
+        }
 	}
 	
 	private void registerFuels() 
@@ -168,23 +163,18 @@ public class EndStoneSmelterTileEntity extends LockableTileEntity implements ITi
 	public void dropExperience(PlayerEntity player) 
 	{
 		List<IRecipe<?>> list = Lists.newArrayList();
-		ObjectIterator<Entry<ResourceLocation>> usedRecipes = this.recipesUsed.object2IntEntrySet().iterator();
-		while(usedRecipes.hasNext()) 
-		{
-			Entry<ResourceLocation> entry = usedRecipes.next();
-			world.getRecipeManager().getRecipe(entry.getKey()).ifPresent((recipe) -> {
-				list.add(recipe);
-				if (recipe instanceof AlloyingRecipe) 
-				{
-					AlloyingRecipe alloying = (AlloyingRecipe) recipe;
-					this.dropExperience(player.world, player.getPositionVec(), entry.getIntValue(), alloying.getExperience());
-				} else 
-				{
-					BlastingRecipe blasting = (BlastingRecipe) recipe;
-					this.dropExperience(player.world, player.getPositionVec(), entry.getIntValue(), blasting.getExperience());
-				}
-			});
-		}
+        for (Entry<ResourceLocation> entry : this.recipesUsed.object2IntEntrySet()) {
+            world.getRecipeManager().getRecipe(entry.getKey()).ifPresent((recipe) -> {
+                list.add(recipe);
+                if (recipe instanceof AlloyingRecipe) {
+                    AlloyingRecipe alloying = (AlloyingRecipe) recipe;
+                    this.dropExperience(player.world, player.getPositionVec(), entry.getIntValue(), alloying.getExperience());
+                } else {
+                    BlastingRecipe blasting = (BlastingRecipe) recipe;
+                    this.dropExperience(player.world, player.getPositionVec(), entry.getIntValue(), blasting.getExperience());
+                }
+            });
+        }
 		player.unlockRecipes(list);
 		this.recipesUsed.clear();
 	}
@@ -600,6 +590,7 @@ public class EndStoneSmelterTileEntity extends LockableTileEntity implements ITi
     protected void invalidateCaps() 
 	{
 		super.invalidateCaps();
-	    for (int x = 0; x < handlers.length; x++) handlers[x].invalidate();
+        for (net.minecraftforge.common.util.LazyOptional<? extends net.minecraftforge.items.IItemHandler> handler : handlers)
+            handler.invalidate();
 	}
 }

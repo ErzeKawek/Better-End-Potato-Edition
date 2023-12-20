@@ -35,11 +35,7 @@ public class InfusionParticleData implements IParticleData
 		}
 	};
 
-	public static final Codec<InfusionParticleData> CODEC = ItemStack.CODEC.xmap(itemStack -> {
-		return new InfusionParticleData(itemStack);
-	}, infusionParticleType -> {
-		return infusionParticleType.itemStack;
-	});
+	public static final Codec<InfusionParticleData> CODEC = ItemStack.CODEC.xmap(InfusionParticleData::new, infusionParticleType -> infusionParticleType.itemStack);
 	
 	private ParticleType<InfusionParticleData> type;
 	private ItemStack itemStack;

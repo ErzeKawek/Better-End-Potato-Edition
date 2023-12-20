@@ -104,9 +104,7 @@ public class CubozoaEntity extends AbstractGroupFishEntity {
 
 	public static boolean canSpawn(EntityType<CubozoaEntity> type, IServerWorld world, SpawnReason spawnReason, BlockPos pos, Random random) {
 		AxisAlignedBB box = new AxisAlignedBB(pos).grow(16);
-		List<CubozoaEntity> list = world.getEntitiesWithinAABB(CubozoaEntity.class, box, (entity) -> {
-			return true;
-		});
+		List<CubozoaEntity> list = world.getEntitiesWithinAABB(CubozoaEntity.class, box, (entity) -> true);
 		return list.size() < 9;
 	}
 
