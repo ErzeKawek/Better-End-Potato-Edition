@@ -22,6 +22,7 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.Random;
@@ -32,25 +33,25 @@ public abstract class EndPodiumFeatureMixin
 	@Shadow @Final private boolean activePortal;
 
 	@Inject(method = "generate(Lnet/minecraft/world/ISeedReader;Lnet/minecraft/world/gen/ChunkGenerator;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/world/gen/feature/NoFeatureConfig;)Z", at = @At("HEAD"), cancellable = true)
-	private void beGeneratePortal(ISeedReader level, ChunkGenerator chunkGenerator, Random random, BlockPos origin,
-								  NoFeatureConfig config, CallbackInfoReturnable<Boolean> info)
-	{
-		if (!GeneratorOptions.hasPortal())
-		{
+	private void beGeneratePortal(ISeedReader level, ChunkGenerator chunkGenerator, Random random, BlockPos origin, NoFeatureConfig config, CallbackInfoReturnable<Boolean> info) {
+		if (!GeneratorOptions.hasPortal()) {
 			info.setReturnValue(false);
-		}
-
-		else if (GeneratorOptions.replacePortal() && FMLLoader.getLoadingModList().getModFileById("endergetic") == null) {
+		} else if (GeneratorOptions.replacePortal() && !isEndergeticLoaded) {
             BlockPos blockPos = be_updatePos(origin, level);
 			Template structure = StructureHelper.readStructure(BetterEnd.makeID(activePortal ? "portal/end_portal_active" : "portal/end_portal_inactive"));
 			Vector3i size = structure.getSize();
 			blockPos = blockPos.add(-(size.getX() >> 1), -1, -(size.getZ() >> 1));
 			structure.func_237146_a_(level, blockPos, blockPos, new PlacementSettings(), random, 2);
 			info.setReturnValue(true);
-			info.cancel();
 		}
 	}
 
+	@Unique private static final boolean isEndergeticLoaded = FMLLoader.getLoadingModList().getModFileById("endergetic") != null;
+
+	@ModifyVariable(method = "generate(Lnet/minecraft/world/ISeedReader;Lnet/minecraft/world/gen/ChunkGenerator;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/world/gen/feature/NoFeatureConfig;)Z", ordinal = 0, at = @At("HEAD"), argsOnly = true)
+	private BlockPos be_setPosOnGround(BlockPos blockPos, ISeedReader world) {
+		return be_updatePos(blockPos, world);
+	}
 
 	@Unique
 	private BlockPos be_updatePos(BlockPos blockPos, ISeedReader world) {

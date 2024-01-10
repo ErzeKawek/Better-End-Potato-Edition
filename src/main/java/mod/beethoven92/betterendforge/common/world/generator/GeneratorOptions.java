@@ -7,7 +7,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 
 public class GeneratorOptions {
-	public static boolean vanillaEndIntegration;
 	private static int biomeSizeLand;
 	private static int biomeSizeVoid;
 	private static int biomeSizeCaves;
@@ -49,7 +48,6 @@ public class GeneratorOptions {
 			"removeChorusFromVanillaBiomes",
 			false
 		);
-		vanillaEndIntegration = Configs.GENERATOR_CONFIG.getBoolean("customGenerator", "vanillaEndIntegration", true);
 		newGenerator = Configs.GENERATOR_CONFIG.getBoolean("customGenerator", "useNewGenerator", true);
 		noRingVoid = Configs.GENERATOR_CONFIG.getBoolean("customGenerator", "noRingVoid", false);
 		generateCentralIsland = Configs.GENERATOR_CONFIG.getBoolean("customGenerator", "generateCentralIsland", true);
@@ -187,15 +185,9 @@ public class GeneratorOptions {
 		directSpikeHeight = true;
 	}
 
-	public static boolean isVanillaEndIntegrationEnabled()
-	{
-		return vanillaEndIntegration;
-	}
-
 	public static boolean isDirectSpikeHeight() {
 		boolean height = directSpikeHeight;
 		directSpikeHeight = false;
 		return height;
 	}
-
 }
